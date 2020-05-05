@@ -4,7 +4,7 @@ date: 2020-05-05T09:22:53-04:00
 draft: false
 ---
 
-I've heard the phrase "just the tip of the iceberg" used a a positive phrase when revealing
+I've heard the phrase "just the tip of the iceberg" used as a positive phrase when revealing
 value of which an audience might not have been previously aware.
 
 > *just the tip of the iceberg*:
