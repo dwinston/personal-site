@@ -18,14 +18,10 @@ I reduce lead times for data-driven insights.
 * Granular control of data-plus-interface access.
 
 * Amplified utility of data via interactive, browser-based tools.
-
-* Confidence in software correctness and service reliability.
-
-* Effective allocation of computational resources.
  
 * Automated credentialing that expands capacity for data collaboration.
 
-* Hands-on training of staff, collaborators, and user communities.
+* Trained and empowered staff, collaborators, and user communities.
 
 ## Testimonials
 
