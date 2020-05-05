@@ -1,7 +1,7 @@
 ---
 title: "Just the Tip of Your Data Iceberg"
 date: 2020-05-05T09:22:53-04:00
-draft: true
+draft: false
 ---
 
 I've heard the phrase "just the tip of the iceberg" used a a positive phrase when revealing
