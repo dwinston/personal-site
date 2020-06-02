@@ -1,0 +1,947 @@
+@prefix : <http://donnywinston.com/ontologies/2020/6/mp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://donnywinston.com/ontologies/2020/6/mp> .
+
+<http://donnywinston.com/ontologies/2020/6/mp> rdf:type owl:Ontology ;
+                                                rdfs:comment "Demo ontology for Materials Project (MP) <https://materialsproject.org> data." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://donnywinston.com/ontologies/2020/6/mp#bulk_modulus
+:bulk_modulus rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :elastic_property ;
+              rdfs:label "K" ,
+                         "bulk modulus" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#density
+:density rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :material_property .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#e_above_hull
+:e_above_hull rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :material_property ;
+              rdfs:comment "stability with respect to decomposition" ;
+              rdfs:label "energy above hull" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#elastic_property
+:elastic_property rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :material_property ;
+                  rdfs:label "elastic property" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#has_element
+:has_element rdf:type owl:ObjectProperty ;
+             rdfs:range :Element ;
+             rdfs:label "has element" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#has_provenance
+:has_provenance rdf:type owl:ObjectProperty ;
+                rdfs:range :Provenance ;
+                rdfs:label "has provenance" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#has_structure
+:has_structure rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :material_property ;
+               rdfs:range :Structure ;
+               rdfs:label "has structure" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_a
+:lattice_a rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :lattice_property ;
+           rdfs:label "a" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_alpha
+:lattice_alpha rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :lattice_property ;
+               rdfs:label "alpha" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_b
+:lattice_b rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :lattice_property ;
+           rdfs:label "b" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_beta
+:lattice_beta rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :lattice_property ;
+              rdfs:label "beta" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_c
+:lattice_c rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :lattice_property ;
+           rdfs:label "c" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_gamma
+:lattice_gamma rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :lattice_property ;
+               rdfs:label "gamma" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_matrix
+:lattice_matrix rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :lattice_property ;
+                rdfs:comment "specifies a sequence of lattice vectors, with length units of Angstroms" ;
+                rdfs:label "matrix" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_property
+:lattice_property rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Lattice ;
+                  rdfs:label "lattice property" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#lattice_volume
+:lattice_volume rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :lattice_property ;
+                rdfs:label "volume" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#magnetic_ordering
+:magnetic_ordering rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :magnetic_property ;
+                   rdfs:label "magnetic ordering" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#magnetic_property
+:magnetic_property rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :material_property ;
+                   rdfs:label "magnetic property" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#material_property
+:material_property rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Material ;
+                   rdfs:label "material property" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#shear_modulus
+:shear_modulus rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :elastic_property ;
+               rdfs:label "G" ,
+                          "shear modulus" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#total_magnetization
+:total_magnetization rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :magnetic_property ;
+                     rdfs:label "total magnetization" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://donnywinston.com/ontologies/2020/6/mp#icsd_id
+:icsd_id rdf:type owl:DatatypeProperty ;
+         rdfs:label "icsd id" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#nelements
+:nelements rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:range xsd:positiveInteger ;
+           rdfs:comment "the number of chemical elements" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://donnywinston.com/ontologies/2020/6/mp#AlkaliMetal
+:AlkaliMetal rdf:type owl:Class ;
+             rdfs:subClassOf :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#AlkalineEarthMetal
+:AlkalineEarthMetal rdf:type owl:Class ;
+                    rdfs:subClassOf :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Element
+:Element rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#ExperimentalProvenance
+:ExperimentalProvenance rdf:type owl:Class ;
+                        rdfs:subClassOf :Provenance ;
+                        rdfs:label "experimental provenance" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#ExperimentallyVerifiedMaterial
+:ExperimentallyVerifiedMaterial rdf:type owl:Class ;
+                                owl:equivalentClass [ owl:intersectionOf ( :Material
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :has_structure ;
+                                                                             owl:someValuesFrom :ExperimentallyVerifiedStructure
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:label "experimentally verified material" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#ExperimentallyVerifiedStructure
+:ExperimentallyVerifiedStructure rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( :Structure
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :has_provenance ;
+                                                                              owl:someValuesFrom :ExperimentalProvenance
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 owl:disjointWith :TheoreticalStructure ;
+                                 rdfs:label "experimentally verified structure" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Lattice
+:Lattice rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Material
+:Material rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Metalloid
+:Metalloid rdf:type owl:Class ;
+           rdfs:subClassOf :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#PostTransitionMetal
+:PostTransitionMetal rdf:type owl:Class ;
+                     rdfs:subClassOf :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Provenance
+:Provenance rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Site
+:Site rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Structure
+:Structure rdf:type owl:Class .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#TheoreticalStructure
+:TheoreticalStructure rdf:type owl:Class ;
+                      rdfs:subClassOf :Structure ;
+                      rdfs:label "theoretical structure" .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#ZintlPhase
+:ZintlPhase rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Material
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :has_element ;
+                                                                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                     owl:unionOf ( :Metalloid
+                                                                                                                   :PostTransitionMetal
+                                                                                                                 )
+                                                                                                   ]
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :nelements ;
+                                                                                owl:hasValue 2
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :has_element ;
+                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( :AlkaliMetal
+                                                                                            :AlkalineEarthMetal
+                                                                                          )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:label "Zintl phase" ;
+            rdfs:seeAlso <https://en.wikipedia.org/wiki/Zintl_phase> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ac
+:Ac rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ag
+:Ag rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Al
+:Al rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Am
+:Am rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ar
+:Ar rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#As
+:As rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#At
+:At rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Au
+:Au rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#B
+:B rdf:type owl:NamedIndividual ,
+            :Element ,
+            :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ba
+:Ba rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Be
+:Be rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Bh
+:Bh rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Bi
+:Bi rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Bk
+:Bk rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Br
+:Br rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#C
+:C rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ca
+:Ca rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cd
+:Cd rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ce
+:Ce rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cf
+:Cf rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cl
+:Cl rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cm
+:Cm rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cn
+:Cn rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Co
+:Co rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cr
+:Cr rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cs
+:Cs rdf:type owl:NamedIndividual ,
+             :AlkaliMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Cu
+:Cu rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Db
+:Db rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ds
+:Ds rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Dy
+:Dy rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Er
+:Er rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Es
+:Es rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Eu
+:Eu rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#F
+:F rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Fe
+:Fe rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Fl
+:Fl rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Fm
+:Fm rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Fr
+:Fr rdf:type owl:NamedIndividual ,
+             :AlkaliMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ga
+:Ga rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Gd
+:Gd rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ge
+:Ge rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#H
+:H rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#He
+:He rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Hf
+:Hf rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Hg
+:Hg rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ho
+:Ho rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Hs
+:Hs rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#I
+:I rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#In
+:In rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ir
+:Ir rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#K
+:K rdf:type owl:NamedIndividual ,
+            :AlkaliMetal ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Kr
+:Kr rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#La
+:La rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Li
+:Li rdf:type owl:NamedIndividual ,
+             :AlkaliMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Lr
+:Lr rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Lu
+:Lu rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Lv
+:Lv rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Mc
+:Mc rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Md
+:Md rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Mg
+:Mg rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Mn
+:Mn rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Mo
+:Mo rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Mt
+:Mt rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#N
+:N rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Na
+:Na rdf:type owl:NamedIndividual ,
+             :AlkaliMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Nb
+:Nb rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Nd
+:Nd rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ne
+:Ne rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Nh
+:Nh rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ni
+:Ni rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#No
+:No rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Np
+:Np rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#O
+:O rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Og
+:Og rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Os
+:Os rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#P
+:P rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pa
+:Pa rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pb
+:Pb rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pd
+:Pd rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pm
+:Pm rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Po
+:Po rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pr
+:Pr rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pt
+:Pt rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Pu
+:Pu rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ra
+:Ra rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Rb
+:Rb rdf:type owl:NamedIndividual ,
+             :AlkaliMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Re
+:Re rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Rf
+:Rf rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Rg
+:Rg rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Rh
+:Rh rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Rn
+:Rn rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ru
+:Ru rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#S
+:S rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sb
+:Sb rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sc
+:Sc rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Se
+:Se rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sg
+:Sg rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Si
+:Si rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sm
+:Sm rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sn
+:Sn rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Sr
+:Sr rdf:type owl:NamedIndividual ,
+             :AlkalineEarthMetal ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ta
+:Ta rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Tb
+:Tb rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Tc
+:Tc rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Te
+:Te rdf:type owl:NamedIndividual ,
+             :Element ,
+             :Metalloid .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Th
+:Th rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ti
+:Ti rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Tl
+:Tl rdf:type owl:NamedIndividual ,
+             :Element ,
+             :PostTransitionMetal .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Tm
+:Tm rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Ts
+:Ts rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#U
+:U rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#V
+:V rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#W
+:W rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Xe
+:Xe rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Y
+:Y rdf:type owl:NamedIndividual ,
+            :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Yb
+:Yb rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Zn
+:Zn rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#Zr
+:Zr rdf:type owl:NamedIndividual ,
+             :Element .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#icsd-57513
+:icsd-57513 rdf:type owl:NamedIndividual ,
+                     :ExperimentalProvenance .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#icsd-606140
+:icsd-606140 rdf:type owl:NamedIndividual ,
+                      :ExperimentalProvenance .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#icsd-606141
+:icsd-606141 rdf:type owl:NamedIndividual ,
+                      :ExperimentalProvenance .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#mp-1903
+:mp-1903 rdf:type owl:NamedIndividual ,
+                  :Material ;
+         :has_element :Al ,
+                      :Ba ;
+         :has_structure :blessedstructure:mp-1903 ;
+         :nelements 2 .
+
+
+###  http://donnywinston.com/ontologies/2020/6/mp#blessedstructure:mp-1903
+:blessedstructure:mp-1903 rdf:type owl:NamedIndividual ,
+                                   :Structure ;
+                          :has_provenance :icsd-57513 ,
+                                          :icsd-606140 ,
+                                          :icsd-606141 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AlkaliMetal
+                :AlkalineEarthMetal
+                :Metalloid
+                :PostTransitionMetal
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
