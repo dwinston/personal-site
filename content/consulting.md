@@ -5,7 +5,8 @@ title: "Consulting"
 
 I reduce lead times for data-driven insights.
 
-My expertise is in data discovery, integration, and sharing. My focus is on
+My expertise is in data discovery, integration, and dissemination.
+My focus is on
 amplifying the capacity of researchers to perform data-intensive science.
 
 ## Typical client outcomes
