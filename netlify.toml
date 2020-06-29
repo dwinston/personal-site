@@ -4,3 +4,4 @@ command = "hugo --gc --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.69.2"
+URL = "https://donnywinston.com"
