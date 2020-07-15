@@ -1,7 +1,7 @@
 ---
 title: "Passover and the Four Users"
 date: 2020-07-15T15:15:51-04:00
-draft: true
+draft: false
 ---
 
 For the Jewish holiday of Passover, guidance is provided as to how to explain its interface
