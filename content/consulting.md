@@ -47,6 +47,13 @@ enable anyone working with him to achieve their goals with just the right level 
 >
 > &mdash; <cite>Industrial Research Scientist</cite>
 
+> "Donny is one of the most effective communicators I know. He made sure the team understood why and how his solutions were efficient and forward-looking, providing confidence in our progress."
+>
+> &mdash; <cite>Materials Research Scientist</cite>
+
+> "I approached Donny to find a solution for a centralized system managing database credentials for our group. He delivered a well-rounded open-source python package including the necessary infrastructure which has ever since saved us valuable time on a daily basis. Particularly outstanding was his patience to discuss difficult technical details until we found a common denominator."
+>
+> &mdash; <cite>Computer Systems Engineer embedded in scientific research group</cite>
 
 ## Get in touch
 
