@@ -68,15 +68,19 @@ values. A "state" is a snapshot, a material-as-identity's structure-as-value at
 a given "moment"[^moment] "in time". This state is customarily extended by
 idempotent characterization of that structure's properties-as-values.
 
-Finally, what is material performance in terms of the epochal time model? Like
-processing, which is a function taking one structure value (a material state) to
-another structure value, and like characterization, which is also a function
-taking one structure value to one or more property values, performance is a
-function as well. Performance is a comparator that takes as input (a) some
-assembly of a material's values (snapshot perceptions of selected states), and
-(b) a collection of corresponding assemblies from other "materials" deemed
-relevant for comparison, and outputs a value for performance as perceived
-(characterized) by the function.
+Finally, what is material performance in terms of the epochal time model? A
+material's performance is determined from the characterized properties of that
+material's structural state space in a given environmental context of process
+control that dictates state transitions. That is, material performance is an
+identity assigned to a succession of characterized-properties values that are
+sourced in turn from the succession of structures reached by a
+materials-as-identity in a processing context. See the diagram below.
+
+<img src="/img/epochal-materials-model-sm.png" width="100%"
+style="border: thin dashed gray;"
+alt="An epochal-time model of the materials paradigm." />
+<em>An epochal-time model of the materials paradigm.</em>
+<br>
 
 Just as the epochal time model was productively applied to the design and
 implementation of the Clojure programming language, I hope that this model
