@@ -134,7 +134,7 @@ Plain data is less powerful that even "pure" functions - no behavior is
 expressed. Often, data rather than code can be used to define/drive control
 flow. This is data-driven programming, aka configuration-driven programming.
 
-In "Transparency through data", James Reeves[[^reeves] posits that to build on
+In "Transparency through data", James Reeves[^reeves] posits that to build on
 something, that something must be seen clearly: it must be transparent.
 Transparency is about understanding, and understanding is about prediction. Code
 that's easy to predict is transparent. In particular, the broader the
@@ -142,7 +142,7 @@ predictions we can make, the more transparent the code is. What makes something
 predictable? Constraints. The more we constrain something, the broader the
 predictions we can make about it. By empowering something, we make it more
 opaque, less transparent:
-> "With great power comes great unpredicability."
+> "With great power comes great unpredictability."
 
 Imagine this "function" in Python defined using a dictionary:
 ```python
@@ -198,7 +198,7 @@ how data structure evolves from input to output. The behavior can be "static" in
 a sense of being "shallow", i.e. with loops and recursion avoided. Limiting a
 function's ability to "go deeper" can be related to transparency by analogy to
 transparency of a physical medium. A block of material that is relatively
-"clear" (an intensive property), but that has great depth (an extrinsic
+"clear" (an intensive property), but that has great depth (an extensive
 property), is less transparent because a signal through it has a long distance
 over which to attenuate. "If it can't repeat, it's not Turing complete,"
 yielding a less powerful but more predictable artifact.
