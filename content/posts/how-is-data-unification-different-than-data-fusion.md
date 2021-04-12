@@ -15,7 +15,7 @@ seem meaningfully different than [data fusion](https://en.wikipedia.org/wiki/Dat
 I propose that data unification is more conservative than data fusion -- it stops short of the lossy
 reduction often required for decision-support systems.
 
-From the Wikidpedia article on data fusion linked above:
+From the Wikipedia article on data fusion linked above:
 
 > ... data integration is used to describe the combining of data, whereas data fusion is integration
 followed by reduction or replacement.
@@ -37,7 +37,7 @@ In unification, no guessing is permissible. Rather, additional user input is sol
 with type inference, a compiler does not "train" on the types you explicitly annotate, plus the ones
 it can infer with 100% confidence, in order to assign guesses to what remains. Rather, though it may
 guess, it requires user input to confirm guessed types. Until the type checker is 100% confident,
-the unification process is unsuccessful.
+the unification process does not fuse.
 
 Thus, I view Stonebraker's contention that a rule system implementation will not scale as saying
 that, if a data application requires classification of all records, even in the absence of logical
