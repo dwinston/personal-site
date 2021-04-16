@@ -27,3 +27,5 @@ Language (SHACL) vocabulary extends expression of logic to [JavaScript
 functions](https://www.w3.org/TR/2017/NOTE-shacl-js-20170608/#h-js-functions) (Python functions seem
 doable...) -- this could help to transform a spreadsheet's cell values to conform to a desired
 schema.
+
+{{< subscribe >}}
