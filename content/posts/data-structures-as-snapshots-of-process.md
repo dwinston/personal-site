@@ -35,3 +35,5 @@ data, though, look upstream.
 [^fair]: M. D. Wilkinson _et al._, “The FAIR Guiding Principles for scientific data management and
 stewardship,” _Sci Data_, vol. 3, no. 1, p. 160018, Mar. 2016, doi:
 [10/bdd4](https://doi.org/10/bdd4).
+
+{{< subscribe >}}
