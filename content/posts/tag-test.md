@@ -6,7 +6,8 @@ tags:
 - test
 ---
 
-This is a test to see if tag-specific RSS feeds are automatically generated.
+This is a test to see if tag-specific RSS feeds are automatically generated
+for each tag in a [Hugo](https://gohugo.io/) blog.
 
 The front matter for this post is:
 

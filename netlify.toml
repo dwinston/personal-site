@@ -3,5 +3,5 @@ publish = "public"
 command = "hugo -b $URL --gc --minify"
 
 [context.production.environment]
-HUGO_VERSION = "0.80.0"
+HUGO_VERSION = "0.88.0"
 URL = "https://donnywinston.com"
