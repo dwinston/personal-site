@@ -96,6 +96,7 @@ hand-authored Turtle (terse triple format for RDF graph data). For example:
 , "Such a mean old man"
 .
 <pam> sdo:sibling <mrmustard>
+.
 ```
 rather than a more conventional style, e.g.
 ```turtle
