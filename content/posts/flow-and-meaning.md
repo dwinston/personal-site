@@ -1,7 +1,7 @@
 ---
 title: "Flow and Meaning"
 date: 2022-01-17T11:03:37-05:00
-draft: true
+draft: false
 tags:
 - raw
 - woo-woo
