@@ -21,3 +21,5 @@ economic impact of variability is a profoundly different goal than minimizing va
 
 [^reinertsen]: D. G. Reinertsen, *The principles of product development flow: second generation lean
 product development*. Redondo Beach, California: Celeritas Publishing, 2009.
+
+{{< subscribe >}}
