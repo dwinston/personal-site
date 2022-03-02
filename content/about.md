@@ -27,4 +27,4 @@ enhance collaboration and the impact of findings.
 I decided to move to New York City in the Fall of 2019, where I joined the [Recurse Center](https://www.recurse.com/), a
 marvelous venue for a professional mini-sabbatical. I now run a [software and data consulting
 practice](https://polyneme.xyz/), with expertise in helping researchers do data-intensive science together. [Email
-me](mailto:mail@donnywinston.com) with any questions -- you cannot waste my time!
+me](mailto:donny@donnywinston.com) with any questions -- you cannot waste my time!
