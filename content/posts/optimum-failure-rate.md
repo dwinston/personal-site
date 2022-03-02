@@ -12,7 +12,7 @@ failures" or "avoid failures". We maximize information gain by making outcomes e
 for a test with two outcomes, seek a 50% failure rate. This is information-theoretic support for the
 binary search algorithm and for determining LD50 in pharmaceutical toxicity trials.
 
-Not all evaluation is designed to maximize information gain. Validation tests strive for 100
+Not all evaluation is designed to maximize information gain. Validation tests strive for 100%
 success, and rightly so. Exploratory testing, though -- seeking novelty -- is a sine qua non of
 scientific research.
 
