@@ -4,7 +4,7 @@ date: 2022-03-25T13:40:35-04:00
 draft: false
 ---
 
-Imagine a child playing with blocks. Imagine the child's mind contains a host smaller minds - "agents". Imagine an agent called *Builder* in control. *Builder* makes towers from blocks:
+Imagine a child playing with blocks. Imagine the child's mind contains a host of smaller minds - "agents". Imagine an agent called *Builder* in control. *Builder* makes towers from blocks:
 
 ![block-tower-build](https://files.polyneme.xyz/dropshare/block-tower-build-UOFur3qMlp.png)
 
