@@ -2,6 +2,8 @@
 title: "The Agents of a FAIR Research Platform"
 date: 2022-03-22T14:33:20-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 To explain a FAIR research platform, we have to show how they are built from mindless stuff, smaller

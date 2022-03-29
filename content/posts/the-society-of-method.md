@@ -2,6 +2,8 @@
 title: "The Society of Method"
 date: 2022-03-24T13:00:48-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 For a method, a protocol, thought about and done by you, what's a "you"? What kinds of smaller

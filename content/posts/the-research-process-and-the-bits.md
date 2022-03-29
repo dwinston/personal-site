@@ -2,6 +2,8 @@
 title: "The Research Process and the Bits"
 date: 2022-03-23T14:34:09-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 How could solid-seeming computer hardware support such a ghostly thing as research progress? The

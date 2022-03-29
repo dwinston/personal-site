@@ -2,6 +2,8 @@
 title: "Riffs on the Society of Mind - Prologue"
 date: 2022-03-21T09:54:33-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 How do FAIR data resources work? How can you build a FAIR resource from many little parts, each

@@ -2,6 +2,8 @@
 title: "The World of Blocks"
 date: 2022-03-25T13:40:35-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 Imagine a child playing with blocks. Imagine the child's mind contains a host of smaller minds - "agents". Imagine an agent called *Builder* in control. *Builder* makes towers from blocks:

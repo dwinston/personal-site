@@ -2,6 +2,8 @@
 title: "Common Sense"
 date: 2022-03-27T09:32:59-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 We [found a way](https://donnywinston.com/posts/the-world-of-blocks/) to make a tower builder out of parts. But *Builder* is really far from done.
