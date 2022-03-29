@@ -12,7 +12,10 @@ Where does the "knowing-how-to-build" of a *Builder* agent reside? It is not in 
 
 Seen by itself, as an agent, *Builder* is just a simple process that turns other agents on and off. Seen from outside, as an agency, *Builder* does whatever all its sub-agents accomplish, using one another's help:
 
-![agents-and-agencies](https://files.polyneme.xyz/dropshare/agents-and-agencies-xWtuG28LbO.png)
+<img title="agents-and-agencies" alt="agents-and-agencies"
+     width="100%"
+     src="https://files.polyneme.xyz/dropshare/agents-and-agencies-xWtuG28LbO.png"
+/>
 
 *Builder* seems to lead a double life. As agency, it seems to know its job. As agent, it cannot know anything at all.
 
