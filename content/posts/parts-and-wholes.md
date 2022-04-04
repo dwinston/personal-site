@@ -2,6 +2,8 @@
 title: "Parts and Wholes"
 date: 2022-04-01T11:19:24-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 > We're often told that certain wholes are "more than the sum of their parts." We hear this expressed with reverent words like "holistic" and "gestalt," whose academic tones suggest that they refer to clear and definite ideas. But I suspect the actual function of such terms is to anesthetize a sense of ignorance. We say "gestalt" when things combine to act in ways we can't explain, "holistic" when we're caught off guard by unexpected happenings and realize we understand less than we thought we did.

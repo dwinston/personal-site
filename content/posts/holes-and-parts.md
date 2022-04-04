@@ -2,6 +2,8 @@
 title: "Holes and Parts"
 date: 2022-04-03T11:20:34-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 What keeps a mouse contained in a box?

@@ -2,6 +2,8 @@
 title: "Novelists and Reductionists"
 date: 2022-03-31T11:18:14-04:00
 draft: false
+tags:
+- society-of-FAIR
 ---
 
 Some like to focus on the new. They like to invent theories.
