@@ -54,6 +54,6 @@ if __name__ == "__main__":
     subprocess.run(["hugo", "new", filename], check=True)
     with open(f"content/{filename}", 'a') as f:
         f.write(email['body'])
-        f.write('\n')
+        f.write('\n\n')
         f.write('{{< subscribe >}}')
     print("created", filename)
