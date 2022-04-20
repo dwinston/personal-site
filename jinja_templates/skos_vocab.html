@@ -8,6 +8,9 @@
           href="https://donnywinston.com/elements_of_clojure.dw.ttl"
           title="{{ title }}"
     >
+    <style>
+        body { max-width: 40em; }
+    </style>
 </head>
 <body>
 
@@ -18,14 +21,25 @@
 {{ s.p | safe }}: {{ s.o | safe }}
 {% if not loop.last %}<br/>{% endif %}
 {% endfor %}
-f'<a href={str(item)}>{label}</a>'
-{% for c, statements in statements_for_concept.items() %}
-    <h2 id="{{c.split(':')[-1][:-4] }}">{{ c | safe }}</h2>
-    {% for s in statements %}
-    {{ s.p | safe }}: {{ s.o | safe }}
-    {% if not loop.last %}<br/>{% endif %}
+
+<h2>Collections</h2>
+{% for c in collections %}
+<h3 id="{{ c.id }}">{{ c.link | safe }}</h3>
+    {% for m in c.members %}
+    {{ m | safe }}{% if not loop.last %}, {% endif %}
     {% endfor %}
+{% if not loop.last %}<br/>{% endif %}
 {% endfor %}
+
+<h2>Concepts</h2>
+<dl>
+    {% for c, statements in statements_for_concept.items() %}
+    <dt id="{{c.split(':')[-1][:-4] }}">{{ c | safe }}</dt>
+        {% for s in statements %}
+            <dd>{{ s.p | safe }}: {{ s.o | safe }}</dd>
+        {% endfor %}
+    {% endfor %}
+</dl>
 
 </body>
 </html>

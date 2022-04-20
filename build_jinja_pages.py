@@ -45,6 +45,18 @@ if __name__ == "__main__":
         )
     statements_for_concept = {c: statements_for_concept[c] for c in sorted(statements_for_concept)}
 
+    collections = []
+    for c in g.subjects(RDF.type, SKOS.Collection):
+        c_link = display(c, g)
+        c_id = c_link.split(':')[-1][:-4]
+        collections.append({
+            "id": c_id,
+            "link": c_link,
+            "members": sorted([display(m, g) for m in g.objects(c, SKOS.member)])
+        })
+    coll_order = ["Names", "Idioms", "Indirection", "Composition"]
+    collections = sorted(collections, key=lambda c: coll_order.index(c["id"]))
+
     template = jinja_env.get_template("skos_vocab.html")
 
     html = template.render(
@@ -52,6 +64,7 @@ if __name__ == "__main__":
         description=next(s for s in scheme_statements if "dcterms:description" in s["p"])["o"][1:-1],
         scheme_statements=scheme_statements,
         statements_for_concept=statements_for_concept,
+        collections=collections,
     )
 
     os.makedirs("static/elements_of_clojure", exist_ok=True)
