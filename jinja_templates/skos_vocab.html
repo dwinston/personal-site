@@ -18,9 +18,9 @@
 {{ s.p | safe }}: {{ s.o | safe }}
 {% if not loop.last %}<br/>{% endif %}
 {% endfor %}
-
+f'<a href={str(item)}>{label}</a>'
 {% for c, statements in statements_for_concept.items() %}
-    <h2>{{ c | safe }}</h2>
+    <h2 id="{{c.split(':')[-1][:-4] }}">{{ c | safe }}</h2>
     {% for s in statements %}
     {{ s.p | safe }}: {{ s.o | safe }}
     {% if not loop.last %}<br/>{% endif %}

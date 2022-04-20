@@ -1,6 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eoc: <https://donnywinston.com/elements_of_clojure#> .
-@prefix ns1: <http://www.linkedmodel.org/1.2/schema/vaem#> .
+@prefix vaem: <http://www.linkedmodel.org/1.2/schema/vaem#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -414,7 +414,7 @@ eoc:utilization a skos:Concept ;
     dcterms:description "Bolded terms, and their relationships, from Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
     dcterms:subject "Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
     dcterms:title "Elements of Clojure" ;
-    ns1:namespace <http://vocabularies.metaphacts.com/elements_of_clojure/> ;
+    vaem:namespace <https://donnywinston.com/elements_of_clojure#> ;
     skos:hasTopConcept eoc:accrete,
         eoc:adaptable,
         eoc:assumption,
