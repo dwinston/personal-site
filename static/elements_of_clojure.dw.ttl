@@ -410,7 +410,7 @@ eoc:utilization a skos:Concept ;
 <https://donnywinston.com/elements_of_clojure> a skos:ConceptScheme ;
     rdfs:label "Elements of Clojure" ;
     dcterms:created "2022-04-19T00:00:00+00:00"^^xsd:dateTime ;
-    dcterms:creator "https://orcid.org/0000-0002-8424-0604" ;
+    dcterms:creator <https://orcid.org/0000-0002-8424-0604> ;
     dcterms:description "Bolded terms, and their relationships, from Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
     dcterms:subject "Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
     dcterms:title "Elements of Clojure" ;
