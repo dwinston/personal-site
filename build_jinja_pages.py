@@ -24,7 +24,7 @@ def display(item, g):
 
 if __name__ == "__main__":
     g = Graph()
-    g.parse("elements_of_clojure.dw.ttl")
+    g.parse("static/elements_of_clojure.dw.ttl")
     g.bind("vaem", Namespace("http://www.linkedmodel.org/1.2/schema/vaem#"))
 
     scheme = g.value(predicate=RDF.type, object=SKOS.ConceptScheme)
@@ -54,6 +54,6 @@ if __name__ == "__main__":
         statements_for_concept=statements_for_concept,
     )
 
-    os.makedirs("public/elements_of_clojure", exist_ok=True)
-    with open("public/elements_of_clojure/index.html", "w") as f:
+    os.makedirs("static/elements_of_clojure", exist_ok=True)
+    with open("static/elements_of_clojure/index.html", "w") as f:
         f.write(html)
