@@ -1,0 +1,118 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix fair: <https://w3id.org/fair/principles/terms/> .
+@prefix dp: <https://data.world/blog/data-product-abcs/#> .
+
+<https://donnywinston.com/fair-vs-data-product-abcde>
+    a rdf:Bag ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty rdfs:member ;
+        owl:allValuesFrom owl:Axiom ;
+    ] ;
+    dcterms:title "Mapping FAIR to Data Product ABCs" ;
+    skos:note "Thought to make this a https://w3id.org/sssom MappingSet, but that seemed like overkill for now." ;
+    skos:relatedMatch <https://w3id.org/sssom/MappingSet> ;
+.
+
+<https://www.w3id.org/fair/principles/terms/FAIR-Vocabulary> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/fair/principles/terms/> .
+
+fair:F skos:prefLabel "Findable" .
+fair:F1 skos:definition "(meta)data are assigned a globally unique and persistent identifier" .
+fair:F2 skos:definition "data are described with rich metadata (defined by R1 below)" .
+fair:F3 skos:definition "metadata clearly and explicitly include the identifier of the data it describes" .
+fair:F4 skos:definition "(meta)data are registered or indexed in a searchable resource" .
+
+fair:A skos:prefLabel "Accessible" .
+fair:A1 skos:definition "(meta)data are retrievable by their identifier using a standardized communications protocol" .
+fair:A1.1 skos:definition "the protocol is open, free, and universally implementable" .
+fair:A1.2 skos:definition "the protocol allows for an authentication and authorization procedure, where necessary" .
+fair:A2 skos:definition "metadata are accessible, even when the data are no longer available" .
+
+fair:I skos:prefLabel "Interoperable" .
+fair:I1 skos:definition "(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation" .
+fair:I2 skos:definition "(meta)data use vocabularies that follow FAIR principles" .
+fair:I3 skos:definition "(meta)data include qualified references to other (meta)data" .
+
+fair:R skos:prefLabel "Reusable" .
+fair:R1 skos:definition "meta(data) are richly described with a plurality of accurate and relevant attributes" .
+fair:R1.1 skos:definition "(meta)data are released with a clear and accessible data usage license" .
+fair:R1.2 skos:definition "(meta)data are associated with detailed provenance" .
+fair:R1.3 skos:definition "(meta)data meet domain-relevant community standards" .
+
+
+<https://data.world/blog/data-product-abcs/#> rdfs:isDefinedBy <https://data.world/resources/reports-and-tools/data-mesh-governance-white-paper/> .
+
+dp:aOwns skos:prefLabel "Accountability: Who is the owner that is responsible for the data?" .
+dp:aDefines skos:prefLabel "Accountability: Who defines the requirements?" .
+dp:aFixes skos:prefLabel "Accountability: Who fixes it when it breaks?" .
+
+dp:aOwns skos:broadMatch fair:R1 .
+dp:aDefines skos:broadMatch fair:R1.3 .
+dp:aFixes skos:broadMatch fair:R1 .
+
+
+
+dp:bWhatIs skos:prefLabel "Boundaries: What is the data?" .
+dp:bWhatIsnt skos:prefLabel "Boundaries: What isn't it?" .
+dp:bWhere skos:prefLabel "Boundaries: Where will it live?" .
+dp:bInsOuts skos:prefLabel "Boundaries: What are the inputs and outputs?" .
+dp:bHow skos:prefLabel "Boundaries: How do you balance that roadmap against other organizational priorities and considerations?" .
+
+dp:bWhatIs skos:closeMatch fair:F2, fair:R1 .
+dp:bWhatIsnt skos:relatedMatch fair:F2, fair:R1 .
+dp:bWhere skos:exactMatch fair:F1 .
+dp:bInsOuts skos:closeMatch fair:R1.2 .
+dp:bHow skos:relatedMatch fair:I3 .
+
+
+
+dp:cData skos:prefLabel "Contracts & Expectations: What are the data constraints, definitions, and tests?" .
+dp:cService skos:prefLabel "Contracts & Expectations: What are the SLAs and SLOs?" .
+dp:cUse skos:prefLabel "Contracts & Expectations: What are the sharing agreements, consented uses, and policies?" .
+dp:cPurpose skos:prefLabel "Contracts & Expectations: What is the purpose?" .
+dp:cPerf skos:prefLabel "Contracts & Expectations: What is the performance and scale?" .
+dp:cQuality skos:prefLabel "Contracts & Expectations: What are the quality and maintainability details?" .
+dp:cSecurity skos:prefLabel "Contracts & Expectations: How is it being kept secure and private? Who can see it? Use it?" .
+
+dp:cData skos:closeMatch fair:I .
+dp:cService skos:relatedMatch fair:A, fair:I .
+dp:cUse skos:closeMatch fair:R1.1 .
+dp:cPurpose skos:relatedMatch fair:F2, fair:R1.3 .
+dp:cPerf skos:relatedMatch fair:R .
+dp:cQuality skos:relatedMatch fair:R1.2, fair:R1.3 , fair:I3 .
+dp:cSecurity skos:narrowMatch fair:A1.2 .
+
+
+
+dp:dCurrentConsumers skos:prefLabel "Downstream Consumers: Who are the current consumers?" .
+dp:dPotentialConsumers skos:prefLabel "Downstream Consumers: Who are potential consumers?" .
+dp:dUseCases skos:prefLabel "Downstream Consumers: What are the use cases that have been considered?" .
+dp:dValue skos:prefLabel "Downstream Consumers: What is the value?" .
+dp:dRoadmap skos:prefLabel "Downstream Consumers: What is the roadmap of the data product?" .
+dp:dEvolvability skos:prefLabel "Downstream Consumers: How will it evolve to provide more value for consumers over time?" .
+dp:dUX skos:prefLabel "Downstream Consumers: What is the user experience of the data? APIs, shape, access point?" .
+
+dp:dCurrentConsumers skos:relatedMatch fair:F2, fair:F4, fair:R .
+dp:dPotentialConsumers skos:relatedMatch fair:F2, fair:F4, fair:R .
+dp:dUseCases skos:relatedMatch fair:R .
+dp:dValue skos:relatedMatch fair:R .
+dp:dRoadmap skos:relatedMatch fair:I3, fair:R .
+dp:dEvolvability skos:relatedMatch fair:I .
+dp:dUX skos:relatedMatch fair:A, fair:I .
+
+
+
+dp:eMeaning skos:prefLabel "Explicit Knowledge: What is the meaning?" .
+dp:eSchema skos:prefLabel "Explicit Knowledge: What is the schema?" .
+dp:eRelations skos:prefLabel "Explicit Knowledge: How is it related to other data products?" .
+dp:eDocsExamples skos:prefLabel "Explicit Knowledge: Where is the documentation with examples?" .
+
+dp:eMeaning skos:closeMatch fair:I .
+dp:eSchema skos:closeMatch fair:I .
+dp:eRelations skos:narrowMatch fair:I3 .
+dp:eDocsExamples skos:relatedMatch fair:A2, fair:I2, fair:R .

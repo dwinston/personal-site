@@ -4,7 +4,7 @@ from collections import defaultdict
 from operator import itemgetter
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from rdflib import Graph, RDF, SKOS, Namespace, URIRef
+from rdflib import Graph, RDF, RDFS, SKOS, Namespace, URIRef, DCTERMS
 
 jinja_env = Environment(
     loader=FileSystemLoader("jinja_templates"),
@@ -22,7 +22,42 @@ def display(item, g):
         return label
 
 
-if __name__ == "__main__":
+def _build_page_of_resource_mappings(ttl_file_basename):
+    g_vocab = Graph().parse("static/ontologies/skos.ttl")
+    label_props = [RDFS.label] + [p for p in g_vocab.subjects(RDFS.subPropertyOf, RDFS.label)]
+    note_props = [SKOS.note] + [p for p in g_vocab.subjects(RDFS.subPropertyOf, SKOS.note)]
+    mapping_props = [SKOS.exactMatch] + [p for p in g_vocab.subjects(RDFS.subPropertyOf, SKOS.mappingRelation)]
+    props_allowlist = label_props + note_props + mapping_props
+
+    statements_for_resource = defaultdict(list)
+
+    g = Graph()
+    g.parse(f"static/{ttl_file_basename}.ttl")
+    for p in props_allowlist:
+        for s, o in g.subject_objects(p):
+            r = display(s, g)
+            statements_for_resource[r].append(
+                dict(p=display(p, g), o=display(o, g)))
+
+    statements_for_resource = {r: sorted(statements_for_resource[r], key=itemgetter("p"))
+                               for r in sorted(statements_for_resource)}
+
+    template = jinja_env.get_template("labels_and_notes.html")
+    html = template.render(
+        ttl_file_basename=ttl_file_basename,
+        title=g.value(
+            subject=URIRef(f"https://donnywinston.com/{ttl_file_basename}"),
+            predicate=DCTERMS.title
+        ),
+        statements_for_resource=statements_for_resource
+    )
+
+    os.makedirs(f"static/{ttl_file_basename}", exist_ok=True)
+    with open(f"static/{ttl_file_basename}/index.html", "w") as f:
+        f.write(html)
+
+
+def _build_elements_of_clojure_page():
     g = Graph()
     g.parse("static/elements_of_clojure.dw.ttl")
     g.bind("vaem", Namespace("http://www.linkedmodel.org/1.2/schema/vaem#"))
@@ -70,3 +105,8 @@ if __name__ == "__main__":
     os.makedirs("static/elements_of_clojure", exist_ok=True)
     with open("static/elements_of_clojure/index.html", "w") as f:
         f.write(html)
+
+
+if __name__ == "__main__":
+    #_build_elements_of_clojure_page()
+    _build_page_of_resource_mappings("fair-vs-data-product-abcde")

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="alternate"
+          type="text/turtle"
+          href="https://donnywinston.com/{{ ttl_file_basename }}.ttl"
+          title="{{ title }}"
+    >
+    <style>
+        body { max-width: 40em; }
+    </style>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<p>As RDF (text/turtle): <a href="https://donnywinston.com/{{ ttl_file_basename }}.ttl">https://donnywinston.com/{{ ttl_file_basename }}.ttl</a></p>
+
+
+<dl>
+    {% for r, statements in statements_for_resource.items() %}
+    <dt id="{{r.split(':')[-1][:-4] }}">{{ r | safe }}</dt>
+        {% for s in statements %}
+            <dd>{{ s.p | safe }}: {{ s.o | safe }}</dd>
+        {% endfor %}
+    {% endfor %}
+</dl>
+
+
+
+</body>
+</html>
