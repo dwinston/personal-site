@@ -14,6 +14,6 @@ For evolvable data exchange, you need to be able to continually add qualified re
 
 This is [FAIR principle I3](https://w3id.org/fair/principles/terms/I3), which depends on [I1](https://w3id.org/fair/principles/terms/I1) and [I2](https://w3id.org/fair/principles/terms/I2) for robustness.
 
-[^som]: M. Minsky, *The Society of Mind*. New York: Simon and Schuster, 1986, p. 56.
+[^som]: M. Minsky, *The Society of Mind*. New York: Simon and Schuster, 1986, p. 57.
 
 {{< subscribe >}}
