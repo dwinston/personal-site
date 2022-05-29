@@ -50,10 +50,15 @@ if __name__ == "__main__":
     emails = list_emails()
     latest_first = sorted(emails, key=lambda e: e["publish_date"], reverse=True)
     email = latest_first[0]
-    filename = f"posts/{email['slug']}.md"
-    subprocess.run(["hugo", "new", filename], check=True)
-    with open(f"content/{filename}", 'a') as f:
-        f.write(email['body'])
-        f.write('\n\n')
-        f.write('{{< subscribe >}}')
-    print("created", filename)
+    # create files for latest emails until we find one that already has a file.
+    for email in latest_first:
+        filename = f"posts/{email['slug']}.md"
+        if os.path.exists(f"content/{filename}"):
+            break
+
+        subprocess.run(["hugo", "new", filename], check=True)
+        with open(f"content/{filename}", 'a') as f:
+            f.write(email['body'])
+            f.write('\n\n')
+            f.write('{{< subscribe >}}')
+        print("created", filename)
