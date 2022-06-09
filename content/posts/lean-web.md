@@ -41,10 +41,10 @@ Now, I can couch a conceptualization of lean principles for web development, i.e
 principles, with clear lineage to the lean thinking principles for manufacturing and through lean
 principles for software development:
 
-1. _Evaluate Resources Late_: Deal in data as late as possible. Apply transformation logic later --
-   there are many applications. Apply presentation logic even later -- there are many modes of
-   consumption for an application. See also: Perlis' epigram[^perlis]: "Functions delay binding; data
-   structures induce binding. Moral: Structure data late in the programming process."
+1. _Evaluate Resources Late_: Deal in data for as long as possible. Apply transformation logic later
+   -- there are many applications. Apply presentation logic even later -- there are many modes of
+   consumption for an application. See also: Perlis' epigram[^perlis]: "Functions delay binding;
+   data structures induce binding. Moral: Structure data late in the programming process."
 
 2. _Mind Value Stream Multiplicity and Looping_: Eliminate waste in process steps, time, information
    (configuration / manual signaling), and material (code, data, storage/compute infrastructure).
