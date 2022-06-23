@@ -1,7 +1,7 @@
 ---
 title: "CFF for Machine-Actionable Software Citations"
 date: 2022-06-23T10:43:21-04:00
-draft: true
+draft: false
 ---
 
 Add a `CITATION.cff` file to your git repository. The [Citation File
