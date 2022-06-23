@@ -1,5 +1,6 @@
 baseURL = ""
 languageCode = "en-us"
+rssLimit = 25
 title = "Donny Winston"
 theme = "noteworthy"
 enableRobotsTXT = true
