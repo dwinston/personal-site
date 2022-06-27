@@ -20,3 +20,5 @@ There's nothing you can express using ontologies that you cannot also express us
 So why declaratively model data at all? Why SQL then and not just CSV files if you're going to load the data into Python et al. anyway?
 The rule of least power (https://en.wikipedia.org/wiki/Rule_of_least_power).
 Ontology languages give you more expressive power than shape-constraint languages while reducing the risk of non-reusability of your modeling logic for unforeseen applications.
+
+{{< subscribe >}}
