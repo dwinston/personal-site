@@ -10,9 +10,9 @@ and administration is distributed among so-called [Credentialed Multi-Primary Ad
 (MPAs)](https://www.dona.net/mpas), of which there are currently nine. You've likely heard of at
 least one MPA: the [International DOI Foundation](https://www.doi.org/).
 
-Each MPA is assigned a number. The DOI Foundatation has `10`. This is why all DOIs begin with `10.`.
+Each MPA is assigned a number. The DOI Foundation has `10`. This is why all DOIs begin with `10.`.
 Each MPA can in turn give a "complete" prefix (everything before the `/`) to a so-called "naming
-authority". The DOI Foundation gave the [Nature Publishing Group](https://www.nature.com/) (now
+authority". The DOI Foundation[^doi-ras] gave the [Nature Publishing Group](https://www.nature.com/) (now
 [Springer Nature](https://www.springernature.com/)) `10.1038`, for example, who in turn can create
 as many local names as they'd like, such as `10.1038/sdata.2016.18`.
 
@@ -56,6 +56,12 @@ to), and they'll give you a full handle when you upload stuff to <https://zenodo
 [ResearchEquals](https://www.researchequals.com) got `10.53962` from CrossRef, and they'll give you
 one for anything you put on <https://www.researchequals.com/>. And of course, journal publishers
 typically give you one when you publish an article with them.
+
+[^doi-ras]: Actually, one of its [registration agencies
+(RAs)](https://www.doi.org/registration_agencies.html), [Crossref](https://www.crossref.org/). The
+DOI Foundation doesn't give out prefixes directly. Individuals request prefixes from RAs, not from
+the DOI Foundation. Thank you [Ed Pentz](https://twitter.com/epentz) for clarifying this. \[footnote
+added 2022-07-01\]
 
 [^1]: Wait, what? It's a DOI? Nope. DOIs are Handles that start with `10.`. https://doi.org/ is
 (currently) a public HTTP proxy server that resolves all Handles, regardless of prefix.
