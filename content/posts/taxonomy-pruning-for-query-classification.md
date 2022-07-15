@@ -14,3 +14,5 @@ query may be labeled with a leaf node of the taxonomy, you can prune, i.e. "roll
 to ensure sufficient signal for training. This helps to maintain
 [recall](https://en.wikipedia.org/wiki/Precision_and_recall#Recall) when filtering query results by
 the query's classification.
+
+{{< subscribe >}}
