@@ -2,53 +2,53 @@
 
 ## Findable
 
-What globally unique, persistent, resolvable identifiers do you use for datasets?
+[F1-D] What globally unique, persistent, resolvable identifiers do you use for datasets?
 
-...for metadata records?
+[F1-MD] ...for metadata records?
 
-Which metadata schemas do you use for findability?
+[F2] Which metadata schemas do you use for findability?
 
-What is the technology that links the persistent identifiers of your data to the metadata description?
+[F3] What is the technology that links the persistent identifiers of your data to the metadata description?
 
-In which search engines are your datasets indexed?
+[F4-D] In which search engines are your datasets indexed?
 
-...are your metadata records indexed?
+[F4-MD] ...are your metadata records indexed?
 
 ## Accessible
 
-Which standardized communication protocol do you use for datasets?
+[A1.1-D] Which standardized communication protocol do you use for datasets?
 
-...for metadata records?
+[A1.1-MD] ...for metadata records?
 
-Which authentication & authorisation technique do you use for datasets?
+[A1.2-D] Which authentication & authorisation technique do you use for datasets?
 
-...for metadata records?
+[A1.2-MD] ...for metadata records?
 
-Which metadata longevity plan do you use?
+[A2] Which metadata longevity plan do you use?
 
 ## Interoperable
 
-Which knowledge representation languages (allowing machine interoperation) do you use for datasets?
+[I1-D] Which knowledge representation languages (allowing machine interoperation) do you use for datasets?
 
-...for metadata records?
+[I1-MD] ...for metadata records?
 
-Which structured vocabularies do you use to encode your datasets?
+[I2-D] Which structured vocabularies do you use to encode your datasets?
 
-...to annotate your metadata records?
+[I2-MD] ...to annotate your metadata records?
 
-Which models, schema(s) do you use for your datasets?
+[I3-D] Which models, schema(s) do you use for your datasets?
 
-...for your metadata records?
+[I3-MD] ...for your metadata records?
 
 ## Reusable
 
-Which usage license do you use for your datasets?
+[R1.1-D] Which usage license do you use for your datasets?
 
-...for your metadata records?
+[R1.1-MD] ...for your metadata records?
 
-Which metadata schemas do you use for describing the provenance of your datasets?
+[R1.2-D] Which metadata schemas do you use for describing the provenance of your datasets?
 
-...of your metadata records?
+[R1.2-MD] ...of your metadata records?
 
 
 # FAIR-Enabling Resources
