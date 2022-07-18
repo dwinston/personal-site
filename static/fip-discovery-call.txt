@@ -1,0 +1,97 @@
+# FAIR-Implementation-Profile Questions
+
+## Findable
+
+What globally unique, persistent, resolvable identifiers do you use for datasets?
+
+...for metadata records?
+
+Which metadata schemas do you use for findability?
+
+What is the technology that links the persistent identifiers of your data to the metadata description?
+
+In which search engines are your datasets indexed?
+
+...are your metadata records indexed?
+
+## Accessible
+
+Which standardized communication protocol do you use for datasets?
+
+...for metadata records?
+
+Which authentication & authorisation technique do you use for datasets?
+
+...for metadata records?
+
+Which metadata longevity plan do you use?
+
+## Interoperable
+
+Which knowledge representation languages (allowing machine interoperation) do you use for datasets?
+
+...for metadata records?
+
+Which structured vocabularies do you use to encode your datasets?
+
+...to annotate your metadata records?
+
+Which models, schema(s) do you use for your datasets?
+
+...for your metadata records?
+
+## Reusable
+
+Which usage license do you use for your datasets?
+
+...for your metadata records?
+
+Which metadata schemas do you use for describing the provenance of your datasets?
+
+...of your metadata records?
+
+
+# FAIR-Enabling Resources
+
+## Findable
+
+- *Identifier service*: A service that provides for any digital object (1) algorithms guaranteeing
+  global uniqueness, (2) a policy document that guarantees persistence, and (3) resolution of the
+  identifier to machine-actionable metadata describing the object and its location.
+
+- *Metadata schema*: A specification (schema) that specifies metadata fields describing attributes
+  of data or other digital objects.
+
+- *Metadata-data linking schema*: A specification (schema) that provides a unique, persistent,
+  (ideally) bi-directional, machine-actionable link between metadata and the data they describe.
+
+- *Registry*: A service that indexes metadata and data and provides search over that index.
+
+## Accessible
+
+- *Communication protocol*: A specification for how messages are structured and exchanged.
+
+- *Authentication and authorization service*: A service that mediates access to digital objects
+  according to specified conditions.
+
+- *Metadata preservation policy*: A document that describes the conditions under which metadata are
+  to be provisioned in the future (maybe part of a data management plan).
+
+## Interoperable
+
+- *Knowledge representation language*: A language specification whereby knowledge can be made
+  processable by machines.
+
+- *Structured vocabulary*: A controlled list of uniquely identified and unambiguous concepts with
+  their definitions represented preferably using web standards.
+
+- *Semantic model*: A specification that defines qualified relations between entities describing
+  data or other digital objects using structured vocabularies.
+
+## Reusable
+
+- *Data usage license*: A document that describes the conditions under which a digital object can be
+  legally used.
+
+- *Provenance model*: A specification (schema) that specifies metadata fields describing the origin
+  and lineage of data or other digital objects.
