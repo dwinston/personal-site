@@ -33,6 +33,8 @@ philosophical (epistemic, ontological, axiological -- value typically not obviou
 <figcaption>A FAIR Digital Object (FDO) framework - the identifier record, identifier resolution behavior, typing, and metadata schemas and records (<a href="https://fairdigitalobjectframework.org/">source</a>). </figcaption>
 </figure>
 
+{{< subscribe >}}
+
 [^1]: M. Beck, "On the hourglass model," Commun. ACM, vol. 62, no. 7, pp. 48–57, Jun. 2019, doi:
 10/gj3fnj.
 
