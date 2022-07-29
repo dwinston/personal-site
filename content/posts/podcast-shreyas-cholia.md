@@ -1,7 +1,7 @@
 ---
 title: "Interview with Shreyas Cholia"
 date: 2022-07-29T10:23:10-04:00
-draft: true
+draft: false
 ---
 
 This week on Machine-Centric Science, I interviewed Shreyas Cholia, currently at the Lawrence
