@@ -50,3 +50,5 @@ Here is what has jelled so far for me:
    - facilitates revision control
 
    - facilitates pub/sub for selective search and retrieval
+
+{{< subscribe >}}
