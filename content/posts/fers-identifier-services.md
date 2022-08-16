@@ -1,7 +1,7 @@
 ---
 title: "FAIR-Enabling Resources - Identifier Services"
 date: 2022-08-15T22:27:00-04:00
-draft: true
+draft: false
 ---
 
 Here are some [identifier services](https://w3id.org/fair/fip/terms/Identifier-service) listed as
