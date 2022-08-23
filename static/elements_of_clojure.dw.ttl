@@ -1,480 +1,624 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eoc: <https://donnywinston.com/elements_of_clojure#> .
-@prefix vaem: <http://www.linkedmodel.org/1.2/schema/vaem#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/1.2/schema/vaem#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-eoc:Composition a skos:Collection ;
-    skos:member eoc:accrete,
-        eoc:channel,
-        eoc:descriptor,
-        eoc:discovery,
-        eoc:effect,
-        eoc:execution%20model,
-        eoc:framework,
-        eoc:functional,
-        eoc:identifier,
-        eoc:operational,
-        eoc:phase,
-        eoc:process,
-        eoc:protocol,
-        eoc:pull,
-        eoc:push,
-        eoc:reduce,
-        eoc:reshape,
-        eoc:resolution,
-        eoc:router,
-        eoc:spawning,
-        eoc:system,
-        eoc:task,
-        eoc:topology,
-        eoc:transform ;
-    skos:prefLabel "Composition" .
-
-eoc:Idioms a skos:Collection ;
-    skos:member eoc:cartesian%20product,
-        eoc:identity,
-        eoc:monoid,
-        eoc:referential%20transparency,
-        eoc:referentially%20opaque,
-        eoc:utilization ;
-    skos:prefLabel "Idioms" .
-
-eoc:Indirection a skos:Collection ;
-    skos:member eoc:adaptable,
-        eoc:assumption,
-        eoc:closed,
-        eoc:conditional,
-        eoc:contingent,
-        eoc:convention,
-        eoc:dereferencing,
-        eoc:dynamic%20dispatch,
-        eoc:environment,
-        eoc:interface,
-        eoc:invariant,
-        eoc:model,
-        eoc:module,
-        eoc:necessary,
-        eoc:open,
-        eoc:principled,
-        eoc:satisfices,
-        eoc:selfconscious,
-        eoc:static%20dispatch,
-        eoc:table,
-        eoc:unselfconscious ;
-    skos:prefLabel "Indirection" .
-
-eoc:Names a skos:Collection ;
-    skos:member eoc:consistent,
-        eoc:data%20scope,
-        eoc:indirection,
-        eoc:narrow,
-        eoc:natural,
-        eoc:reference,
-        eoc:referent,
-        eoc:sense,
-        eoc:sign,
-        eoc:synthetic ;
-    skos:prefLabel "Names" .
-
-eoc:accrete a skos:Concept ;
-    skos:definition "To accrete is to add to an existing collection. It is one of three things a process can do with data. " ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "accrete" .
-
-eoc:adaptable a skos:Concept ;
-    skos:definition "Describes a system that has sparse and flexible relationships between its modules." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "adaptable" .
-
-eoc:assumption a skos:Concept ;
-    skos:definition "Something the model does not reflect as a specific facet of the environment and thus considers fixed or irrelevant." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "assumption" .
-
-eoc:cartesian%20product a skos:Concept ;
-    skos:definition "Every possible combination of (elements from sequences) *a* and *b*, e.g. (for [a [1 2 3] b [:a :b :c]] [a b])." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "cartesian product" .
-
-eoc:channel a skos:Concept ;
-    skos:definition "A channel is a means of indirection via which we can communicate with a process." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "channel" .
-
-eoc:closed a skos:Concept ;
-    skos:definition "The need to change the decision process of a conditional by changing the underlying code." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "closed" .
-
-eoc:conditional a skos:Concept ;
-    skos:definition "A conditional is any expression that uses an *if* or *case* form, making its behavior dependent on the input values." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "This is necessary when only a subset of possible values is valid or, more generally, when different subsets of possible values have different semantics." ;
-    skos:prefLabel "conditional" .
-
-eoc:consistent a skos:Concept ;
-    skos:definition "A consistent name is easily understood by someone familiar with the surrounding code, the problem domain, and the broader programming-language ecosystem." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "Consistency can minimize the continuous state of low-level confusion that exists for any project involving multiple people." ;
-    skos:prefLabel "consistent" .
-
-eoc:contingent a skos:Concept ;
-    skos:definition "The nature of conclusions we draw from inductive reasoning. They are allowed to be wrong." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "contingent" .
-
-eoc:convention a skos:Concept ;
-    skos:definition "Something that helps us enforce assumptions that we cannot automatically enforce either because the assumptions are flawed or because building or executing an additional layer of abstraction is too expensive." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "convention" .
-
-eoc:data%20scope a skos:Concept ;
-    skos:definition "Any data we can see from within our thread." ;
-    skos:example "function parameters, closed-over values" ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "data scope" .
-
-eoc:dereferencing a skos:Concept ;
-    skos:definition "Getting the referent value to which a reference value points." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "dereferencing" .
-
-eoc:descriptor a skos:Concept ;
-    skos:definition "The output of the transform phase of a process. In general this is not just data, but rather a description of the effects that the process should perform. The push phase acts on the descriptor." ;
-    skos:example "In the simplest case, the descriptor is only the data that should be pushed. When we pass \"hello world!\" to *print*, we give a literal description of what *print* should write to *stdout*." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "descriptor" .
-
-eoc:discovery a skos:Concept ;
-    skos:definition "Fetching a list of processes able to provide a particular service." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "In practice, there is little difference between resolution and discovery." ;
-    skos:prefLabel "discovery" .
-
-eoc:dynamic%20dispatch a skos:Concept ;
-    skos:definition "Association a method with an implementation at runtime." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "dynamic dispatch" .
-
-eoc:effect a skos:Concept ;
-    skos:definition "A change to a reference shared between processes." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "Shared references are often hidden behind an interface, which provides structure around how and when effects occur." ;
-    skos:prefLabel "effect" .
-
-eoc:environment a skos:Concept ;
-    skos:definition "Everything else in a module that is not model or interface: other software components, the users, and the world they exist in." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "environment" .
-
-eoc:execution%20model a skos:Concept ;
-    skos:definition "A strategy describing what a process will do when its environment provides too much or too little when the process attempts to pull or push." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "A process with a well-defined execution model can be safely considered in isolation." ;
-    skos:prefLabel "execution model" .
-
-eoc:framework a skos:Concept ;
-    skos:definition "Something that invokes our code rather than being invoked by it." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "framework" .
-
-eoc:functional a skos:Concept ;
-    skos:definition "A functional phase deals with code at rest and defines the purpose of a process." ;
-    skos:example "The transform phase is functional. It can safely ignore much of the context that book-ending pull and push phases wrap in invariants." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "functional" .
-
-eoc:identifier a skos:Concept ;
-    skos:definition "A process identifier is a means of indirection via which we can refer to a process." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "identifier" .
-
-eoc:identity a skos:Concept ;
-    skos:definition "The identity value for a monoid is the value that, when passed to the monoid's 2-arity function along with another value, will result in the function returning the other value." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "identity" .
-
-eoc:indirection a skos:Concept ;
-    skos:definition "A layer of indirection separates *what* something does from *how* it does it." ;
-    skos:example "A function's name can be a layer of indirection." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "indirection" .
-
-eoc:interface a skos:Concept ;
-    skos:definition "The means by which the model and environment interact." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "interface" .
-
-eoc:invariant a skos:Concept ;
-    skos:definition "Something a model must enforce to preclude one or more invalid states that it can represent." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "invariant" .
-
-eoc:model a skos:Concept ;
-    skos:definition "A collection of data and functions." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "model" .
-
-eoc:module a skos:Concept ;
-    skos:definition "A model, an interface, and an environment." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "module" .
-
-eoc:monoid a skos:Concept ;
-    skos:definition "A 0-arity function that returns an identity value and a 2-arity function that takes two values of the same type and returns a single combined value. Combining the identity value with any other value (the 1-arity case) returns that value unchanged." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "monoid" .
-
-eoc:narrow a skos:Concept ;
-    skos:definition "A narrow name clearly excludes things it cannot represent." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "narrow" .
-
-eoc:natural a skos:Concept ;
-    skos:definition "A natural name often has a rich, varied collection of senses. That is, a natural name is often ambiguous." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "natural" .
-
-eoc:necessary a skos:Concept ;
-    skos:definition "The nature of conclusions in formal deductive reasoning. If such conclusions are wrong, it's only because initial assumptions were wrong." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "necessary" .
-
-eoc:open a skos:Concept ;
-    skos:definition "The ability to change the behavior of dereferencing code by conveying different values." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "open" .
-
-eoc:operational a skos:Concept ;
-    skos:definition "An operational phase deals with code in motion and defines the limits of a process." ;
-    skos:example "The push and pull phases of a process are operational. They enforce invariants that can only be designed and judged given a specific context." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "operational" .
-
-eoc:phase a skos:Concept ;
-    skos:definition "A component of a process that can be considered separately from the others, in isolation. A process is composed of pull, push, and transform phases." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "phase" .
-
-eoc:principled a skos:Concept ;
-    skos:definition "Describes a system that has predictable relationships between its modules." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "principled" .
-
-eoc:process a skos:Concept ;
-    skos:definition "The smallest unit of standalone computation. A process has execution isolation (*when* it runs), data isolation (*where* it runs), and is sequential." ;
-    skos:example "Examples of processes: threads in modern operating systems, chains of asynchronous callbacks, Erlang's processes, Carl Hewitt's actors, Smalltalk-72's objects. These all communicate via asynchronous message passing." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "process" .
-
-eoc:protocol a skos:Concept ;
-    skos:definition "The formal mechanism by which we accomplish and acknowledge tasks." ;
-    skos:example "Communication protocols like TCP and HTTP dictate the mechanism and failure modes for communication across a single edge of our system topology." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "protocol" .
-
-eoc:pull a skos:Concept ;
-    skos:definition "A process may pull data from its environment. For a process to transform data sourced from its environment, that data must first be pulled into the process." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "pull" .
-
-eoc:push a skos:Concept ;
-    skos:definition "A process can push a result to its environment, for example the result of transforming data it has pulled in from its environment." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "push" .
-
-eoc:reduce a skos:Concept ;
-    skos:definition "To reduce is to discard information from an existing collection. It is one of three things a process can do with data. " ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "reduce" .
-
-eoc:reference a skos:Concept ;
-    skos:definition "A means of pointing at a referent." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "reference" .
-
-eoc:referent a skos:Concept ;
-    skos:definition "The thing to which a name refers/points." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "referent" .
-
-eoc:referential%20transparency a skos:Concept ;
-    skos:definition "An expression and its result are interchangeable." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "Laziness relies on this." ;
-    skos:prefLabel "referential transparency" .
-
-eoc:referentially%20opaque a skos:Concept ;
-    skos:definition "When we can't just focus on *what* an expression returns -- we also have to think about *how* it produces the value." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "referentially opaque" .
-
-eoc:reshape a skos:Concept ;
-    skos:definition "To reshape is to place in a different kind of collection. It is one of three things a process can do with data. " ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "reshape" .
-
-eoc:resolution a skos:Concept ;
-    skos:definition "A mechanism via which an identifier is mapped onto a specific process." ;
-    skos:example "DNS resolution maps domain names onto IP addresses." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "Resolution mechanisms designed for large systems allow for basic load balancing and failover behavior by providing a one-to-many mapping between identifiers and processes." ;
-    skos:prefLabel "resolution" .
-
-eoc:router a skos:Concept ;
-    skos:definition "A mechanism that provides indirection by exposing a single channel and distributing the data on that channel across multiple processes." ;
-    skos:example "One example is a thread pool: functions are placed on a shared queue and distributed to threads that execute them." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "router" .
-
-eoc:satisfices a skos:Concept ;
-    skos:definition "A model that may not be optimal, but that works well enough in practice, satisfices." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "satisfices" .
-
-eoc:selfconscious a skos:Concept ;
-    skos:definition "Describes a culture in which design and construction is a specialized task, taught in schools using abstract principles." ;
-    skos:example "Skyskrapers, stadiums." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note " The structures of a selfconscious culture are principled; they are not meant to change. If the environment changes, the structure is hardened against the change rather than adapting to it." ;
-    skos:prefLabel "selfconscious" .
-
-eoc:sense a skos:Concept ;
-    skos:definition "The sense of a name is *how* it is referenced, the set of fundamental properties we ascribe to it." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "When we encounter a new name, we only need to understand its sense. The underlying implementation, the referent, can change without us ever knowing or caring." ;
-    skos:prefLabel "sense" .
-
-eoc:sign a skos:Concept ;
-    skos:definition "The textual representation of a name." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "sign" .
-
-eoc:spawning a skos:Concept ;
-    skos:definition "A mechanism may start a new process each time it is triggered. This is spawning. That is, rather than there being a single process, multiple processes are spawned and execute concurrently." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "spawning" .
-
-eoc:static%20dispatch a skos:Concept ;
-    skos:definition "Association a method with an implementation at compile time." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "static dispatch" .
-
-eoc:synthetic a skos:Concept ;
-    skos:definition "A synthetic name has no intuitive sense in the context of our code." ;
-    skos:example "Category theory is a rich source of synthetic names. 'Monad', to most readers, means nothing. As a result, we can define it to mean anything." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "Synthetic names turn comprehension into a binary proposition: either you understand it or you don't." ;
-    skos:prefLabel "synthetic" .
-
-eoc:system a skos:Concept ;
-    skos:definition "A composition of processes." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "system" .
-
-eoc:table a skos:Concept ;
-    skos:definition "A data structure with a distinct set of unordered keys, used to implement an open decision-making mechanism." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "table" .
-
-eoc:task a skos:Concept ;
-    skos:definition "A task is something that begins when a command enters a system and that ends when the consequences of an effect are uncertain. The completion of a task is the ultimate goal of any push, whereas the proximate goal of any push is communication." ;
-    skos:example "A task might be started by a keystroke, a packet from the network, or the creation of the system. A task might end when we can't dictate how a user will respond after displaying text on a screen, or when we can't dictate if a value will ever be read after writing it to a database." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "task" .
-
-eoc:topology a skos:Concept ;
-    skos:definition "The topology of a system is the graph describing the set of active processes and the relationships between them." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "topology" .
-
-eoc:transform a skos:Concept ;
-    skos:definition "A process can transform data." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "transform" .
-
-eoc:unselfconscious a skos:Concept ;
-    skos:definition "Describes a culture in which design and construction is taught using direct demonstration and reflects the constraints and variation of an environment." ;
-    skos:example "In building igloos, there is no \"architect\" -- each person builds their own home." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:note "The structures of an unselfconscious culture are adaptable; they reflect the present needs of the inhabitants." ;
-    skos:prefLabel "unselfconscious" .
-
-eoc:utilization a skos:Concept ;
-    skos:definition "The utilization of a state container is a measure of how often it is in the process of being updated." ;
-    skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
-    skos:prefLabel "utilization" .
-
-<https://donnywinston.com/elements_of_clojure> a skos:ConceptScheme ;
-    rdfs:label "Elements of Clojure" ;
-    dcterms:created "2022-04-19T00:00:00+00:00"^^xsd:dateTime ;
-    dcterms:creator <https://orcid.org/0000-0002-8424-0604> ;
-    dcterms:description "Bolded terms, and their relationships, from Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
-    dcterms:subject "Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
-    dcterms:title "Elements of Clojure" ;
-    vaem:namespace <https://donnywinston.com/elements_of_clojure#> ;
-    skos:hasTopConcept eoc:accrete,
-        eoc:adaptable,
-        eoc:assumption,
-        eoc:cartesian%20product,
-        eoc:channel,
-        eoc:closed,
-        eoc:conditional,
-        eoc:consistent,
-        eoc:contingent,
-        eoc:convention,
-        eoc:data%20scope,
-        eoc:dereferencing,
-        eoc:descriptor,
-        eoc:discovery,
-        eoc:dynamic%20dispatch,
-        eoc:effect,
-        eoc:environment,
-        eoc:execution%20model,
-        eoc:framework,
-        eoc:functional,
-        eoc:identifier,
-        eoc:identity,
-        eoc:indirection,
-        eoc:interface,
-        eoc:invariant,
-        eoc:model,
-        eoc:module,
-        eoc:monoid,
-        eoc:narrow,
-        eoc:natural,
-        eoc:necessary,
-        eoc:open,
-        eoc:operational,
-        eoc:phase,
-        eoc:principled,
-        eoc:process,
-        eoc:protocol,
-        eoc:pull,
-        eoc:push,
-        eoc:reduce,
-        eoc:reference,
-        eoc:referent,
-        eoc:referential%20transparency,
-        eoc:referentially%20opaque,
-        eoc:reshape,
-        eoc:resolution,
-        eoc:router,
-        eoc:satisfices,
-        eoc:selfconscious,
-        eoc:sense,
-        eoc:sign,
-        eoc:spawning,
-        eoc:static%20dispatch,
-        eoc:synthetic,
-        eoc:system,
-        eoc:table,
-        eoc:task,
-        eoc:topology,
-        eoc:transform,
-        eoc:unselfconscious,
-        eoc:utilization ;
-    skos:prefLabel "Elements of Clojure" .
+<https://donnywinston.com/elements_of_clojure>
+	a skos:ConceptScheme ;
+	rdfs:label "Elements of Clojure" ;
+	dcterms:created "2022-04-19T00:00:00+00:00"^^xsd:dateTime ;
+	dcterms:creator <https://orcid.org/0000-0002-8424-0604> ;
+	dcterms:description "Bolded terms, and their relationships, from Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
+	dcterms:subject "Z. Tellman, Elements of Clojure. Monee, IL: Lulu.com, 2019." ;
+	dcterms:title "Elements of Clojure" ;
+	vaem:namespace <https://donnywinston.com/elements_of_clojure#> ;
+	skos:hasTopConcept
+		eoc:accrete ,
+		eoc:adaptable ,
+		eoc:assumption ,
+		<https://donnywinston.com/elements_of_clojure#cartesian%20product> ,
+		eoc:channel ,
+		eoc:closed ,
+		eoc:conditional ,
+		eoc:consistent ,
+		eoc:contingent ,
+		eoc:convention ,
+		<https://donnywinston.com/elements_of_clojure#data%20scope> ,
+		eoc:dereferencing ,
+		eoc:descriptor ,
+		eoc:discovery ,
+		<https://donnywinston.com/elements_of_clojure#dynamic%20dispatch> ,
+		eoc:effect ,
+		eoc:environment ,
+		<https://donnywinston.com/elements_of_clojure#execution%20model> ,
+		eoc:framework ,
+		eoc:functional ,
+		eoc:identifier ,
+		eoc:identity ,
+		eoc:indirection ,
+		eoc:interface ,
+		eoc:invariant ,
+		eoc:model ,
+		eoc:module ,
+		eoc:monoid ,
+		eoc:narrow ,
+		eoc:natural ,
+		eoc:necessary ,
+		eoc:open ,
+		eoc:operational ,
+		eoc:phase ,
+		eoc:principled ,
+		eoc:process ,
+		eoc:protocol ,
+		eoc:pull ,
+		eoc:push ,
+		eoc:reduce ,
+		eoc:reference ,
+		eoc:referent ,
+		<https://donnywinston.com/elements_of_clojure#referential%20transparency> ,
+		<https://donnywinston.com/elements_of_clojure#referentially%20opaque> ,
+		eoc:reshape ,
+		eoc:resolution ,
+		eoc:router ,
+		eoc:satisfices ,
+		eoc:selfconscious ,
+		eoc:sense ,
+		eoc:sign ,
+		eoc:spawning ,
+		<https://donnywinston.com/elements_of_clojure#static%20dispatch> ,
+		eoc:synthetic ,
+		eoc:system ,
+		eoc:table ,
+		eoc:task ,
+		eoc:topology ,
+		eoc:transform ,
+		eoc:unselfconscious ,
+		eoc:utilization
+		;
+	skos:prefLabel "Elements of Clojure" ;
+	.
+
+eoc:Composition
+	a skos:Collection ;
+	skos:member
+		eoc:accrete ,
+		eoc:channel ,
+		eoc:descriptor ,
+		eoc:discovery ,
+		eoc:effect ,
+		<https://donnywinston.com/elements_of_clojure#execution%20model> ,
+		eoc:framework ,
+		eoc:functional ,
+		eoc:identifier ,
+		eoc:operational ,
+		eoc:phase ,
+		eoc:process ,
+		eoc:protocol ,
+		eoc:pull ,
+		eoc:push ,
+		eoc:reduce ,
+		eoc:reshape ,
+		eoc:resolution ,
+		eoc:router ,
+		eoc:spawning ,
+		eoc:system ,
+		eoc:task ,
+		eoc:topology ,
+		eoc:transform
+		;
+	skos:prefLabel "Composition" ;
+	.
+
+eoc:Idioms
+	a skos:Collection ;
+	skos:member
+		<https://donnywinston.com/elements_of_clojure#cartesian%20product> ,
+		eoc:identity ,
+		eoc:monoid ,
+		<https://donnywinston.com/elements_of_clojure#referential%20transparency> ,
+		<https://donnywinston.com/elements_of_clojure#referentially%20opaque> ,
+		eoc:utilization
+		;
+	skos:prefLabel "Idioms" ;
+	.
+
+eoc:Indirection
+	a skos:Collection ;
+	skos:member
+		eoc:adaptable ,
+		eoc:assumption ,
+		eoc:closed ,
+		eoc:conditional ,
+		eoc:contingent ,
+		eoc:convention ,
+		eoc:dereferencing ,
+		<https://donnywinston.com/elements_of_clojure#dynamic%20dispatch> ,
+		eoc:environment ,
+		eoc:interface ,
+		eoc:invariant ,
+		eoc:model ,
+		eoc:module ,
+		eoc:necessary ,
+		eoc:open ,
+		eoc:principled ,
+		eoc:satisfices ,
+		eoc:selfconscious ,
+		<https://donnywinston.com/elements_of_clojure#static%20dispatch> ,
+		eoc:table ,
+		eoc:unselfconscious
+		;
+	skos:prefLabel "Indirection" ;
+	.
+
+eoc:Names
+	a skos:Collection ;
+	skos:member
+		eoc:consistent ,
+		<https://donnywinston.com/elements_of_clojure#data%20scope> ,
+		eoc:indirection ,
+		eoc:narrow ,
+		eoc:natural ,
+		eoc:reference ,
+		eoc:referent ,
+		eoc:sense ,
+		eoc:sign ,
+		eoc:synthetic
+		;
+	skos:prefLabel "Names" ;
+	.
+
+eoc:accrete
+	a skos:Concept ;
+	skos:definition "To accrete is to add to an existing collection. It is one of three things a process can do with data. " ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "accrete" ;
+	.
+
+eoc:adaptable
+	a skos:Concept ;
+	skos:definition "Describes a system that has sparse and flexible relationships between its modules." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "adaptable" ;
+	.
+
+eoc:assumption
+	a skos:Concept ;
+	skos:definition "Something the model does not reflect as a specific facet of the environment and thus considers fixed or irrelevant." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "assumption" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#cartesian%20product>
+	a skos:Concept ;
+	skos:definition "Every possible combination of (elements from sequences) *a* and *b*, e.g. (for [a [1 2 3] b [:a :b :c]] [a b])." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "cartesian product" ;
+	.
+
+eoc:channel
+	a skos:Concept ;
+	skos:definition "A channel is a means of indirection via which we can communicate with a process." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "channel" ;
+	.
+
+eoc:closed
+	a skos:Concept ;
+	skos:definition "The need to change the decision process of a conditional by changing the underlying code." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "closed" ;
+	.
+
+eoc:conditional
+	a skos:Concept ;
+	skos:definition "A conditional is any expression that uses an *if* or *case* form, making its behavior dependent on the input values." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "This is necessary when only a subset of possible values is valid or, more generally, when different subsets of possible values have different semantics." ;
+	skos:prefLabel "conditional" ;
+	.
+
+eoc:consistent
+	a skos:Concept ;
+	skos:definition "A consistent name is easily understood by someone familiar with the surrounding code, the problem domain, and the broader programming-language ecosystem." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "Consistency can minimize the continuous state of low-level confusion that exists for any project involving multiple people." ;
+	skos:prefLabel "consistent" ;
+	.
+
+eoc:contingent
+	a skos:Concept ;
+	skos:definition "The nature of conclusions we draw from inductive reasoning. They are allowed to be wrong." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "contingent" ;
+	.
+
+eoc:convention
+	a skos:Concept ;
+	skos:definition "Something that helps us enforce assumptions that we cannot automatically enforce either because the assumptions are flawed or because building or executing an additional layer of abstraction is too expensive." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "convention" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#data%20scope>
+	a skos:Concept ;
+	skos:definition "Any data we can see from within our thread." ;
+	skos:example "function parameters, closed-over values" ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "data scope" ;
+	.
+
+eoc:dereferencing
+	a skos:Concept ;
+	skos:definition "Getting the referent value to which a reference value points." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "dereferencing" ;
+	.
+
+eoc:descriptor
+	a skos:Concept ;
+	skos:definition "The output of the transform phase of a process. In general this is not just data, but rather a description of the effects that the process should perform. The push phase acts on the descriptor." ;
+	skos:example 'In the simplest case, the descriptor is only the data that should be pushed. When we pass "hello world!" to *print*, we give a literal description of what *print* should write to *stdout*.' ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "descriptor" ;
+	.
+
+eoc:discovery
+	a skos:Concept ;
+	skos:definition "Fetching a list of processes able to provide a particular service." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "In practice, there is little difference between resolution and discovery." ;
+	skos:prefLabel "discovery" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#dynamic%20dispatch>
+	a skos:Concept ;
+	skos:definition "Association a method with an implementation at runtime." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "dynamic dispatch" ;
+	.
+
+eoc:effect
+	a skos:Concept ;
+	skos:definition "A change to a reference shared between processes." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "Shared references are often hidden behind an interface, which provides structure around how and when effects occur." ;
+	skos:prefLabel "effect" ;
+	.
+
+eoc:environment
+	a skos:Concept ;
+	skos:definition "Everything else in a module that is not model or interface: other software components, the users, and the world they exist in." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "environment" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#execution%20model>
+	a skos:Concept ;
+	skos:definition "A strategy describing what a process will do when its environment provides too much or too little when the process attempts to pull or push." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "A process with a well-defined execution model can be safely considered in isolation." ;
+	skos:prefLabel "execution model" ;
+	.
+
+eoc:framework
+	a skos:Concept ;
+	skos:definition "Something that invokes our code rather than being invoked by it." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "framework" ;
+	.
+
+eoc:functional
+	a skos:Concept ;
+	skos:definition "A functional phase deals with code at rest and defines the purpose of a process." ;
+	skos:example "The transform phase is functional. It can safely ignore much of the context that book-ending pull and push phases wrap in invariants." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "functional" ;
+	.
+
+eoc:identifier
+	a skos:Concept ;
+	skos:definition "A process identifier is a means of indirection via which we can refer to a process." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "identifier" ;
+	.
+
+eoc:identity
+	a skos:Concept ;
+	skos:definition "The identity value for a monoid is the value that, when passed to the monoid's 2-arity function along with another value, will result in the function returning the other value." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "identity" ;
+	.
+
+eoc:indirection
+	a skos:Concept ;
+	skos:definition "A layer of indirection separates *what* something does from *how* it does it." ;
+	skos:example "A function's name can be a layer of indirection." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "indirection" ;
+	.
+
+eoc:interface
+	a skos:Concept ;
+	skos:definition "The means by which the model and environment interact." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "interface" ;
+	.
+
+eoc:invariant
+	a skos:Concept ;
+	skos:definition "Something a model must enforce to preclude one or more invalid states that it can represent." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "invariant" ;
+	.
+
+eoc:model
+	a skos:Concept ;
+	skos:definition "A collection of data and functions." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "model" ;
+	.
+
+eoc:module
+	a skos:Concept ;
+	skos:definition "A model, an interface, and an environment." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "module" ;
+	.
+
+eoc:monoid
+	a skos:Concept ;
+	skos:definition "A 0-arity function that returns an identity value and a 2-arity function that takes two values of the same type and returns a single combined value. Combining the identity value with any other value (the 1-arity case) returns that value unchanged." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "monoid" ;
+	.
+
+eoc:narrow
+	a skos:Concept ;
+	skos:definition "A narrow name clearly excludes things it cannot represent." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "narrow" ;
+	.
+
+eoc:natural
+	a skos:Concept ;
+	skos:definition "A natural name often has a rich, varied collection of senses. That is, a natural name is often ambiguous." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "natural" ;
+	.
+
+eoc:necessary
+	a skos:Concept ;
+	skos:definition "The nature of conclusions in formal deductive reasoning. If such conclusions are wrong, it's only because initial assumptions were wrong." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "necessary" ;
+	.
+
+eoc:open
+	a skos:Concept ;
+	skos:definition "The ability to change the behavior of dereferencing code by conveying different values." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "open" ;
+	.
+
+eoc:operational
+	a skos:Concept ;
+	skos:definition "An operational phase deals with code in motion and defines the limits of a process." ;
+	skos:example "The push and pull phases of a process are operational. They enforce invariants that can only be designed and judged given a specific context." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "operational" ;
+	.
+
+eoc:phase
+	a skos:Concept ;
+	skos:definition "A component of a process that can be considered separately from the others, in isolation. A process is composed of pull, push, and transform phases." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "phase" ;
+	.
+
+eoc:principled
+	a skos:Concept ;
+	skos:definition "Describes a system that has predictable relationships between its modules." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "principled" ;
+	.
+
+eoc:process
+	a skos:Concept ;
+	skos:definition "The smallest unit of standalone computation. A process has execution isolation (*when* it runs), data isolation (*where* it runs), and is sequential." ;
+	skos:example "Examples of processes: threads in modern operating systems, chains of asynchronous callbacks, Erlang's processes, Carl Hewitt's actors, Smalltalk-72's objects. These all communicate via asynchronous message passing." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "process" ;
+	.
+
+eoc:protocol
+	a skos:Concept ;
+	skos:definition "The formal mechanism by which we accomplish and acknowledge tasks." ;
+	skos:example "Communication protocols like TCP and HTTP dictate the mechanism and failure modes for communication across a single edge of our system topology." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "protocol" ;
+	.
+
+eoc:pull
+	a skos:Concept ;
+	skos:definition "A process may pull data from its environment. For a process to transform data sourced from its environment, that data must first be pulled into the process." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "pull" ;
+	.
+
+eoc:push
+	a skos:Concept ;
+	skos:definition "A process can push a result to its environment, for example the result of transforming data it has pulled in from its environment." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "push" ;
+	.
+
+eoc:reduce
+	a skos:Concept ;
+	skos:definition "To reduce is to discard information from an existing collection. It is one of three things a process can do with data. " ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "reduce" ;
+	.
+
+eoc:reference
+	a skos:Concept ;
+	skos:definition "A means of pointing at a referent." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "reference" ;
+	.
+
+eoc:referent
+	a skos:Concept ;
+	skos:definition "The thing to which a name refers/points." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "referent" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#referential%20transparency>
+	a skos:Concept ;
+	skos:definition "An expression and its result are interchangeable." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "Laziness relies on this." ;
+	skos:prefLabel "referential transparency" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#referentially%20opaque>
+	a skos:Concept ;
+	skos:definition "When we can't just focus on *what* an expression returns -- we also have to think about *how* it produces the value." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "referentially opaque" ;
+	.
+
+eoc:reshape
+	a skos:Concept ;
+	skos:definition "To reshape is to place in a different kind of collection. It is one of three things a process can do with data. " ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "reshape" ;
+	.
+
+eoc:resolution
+	a skos:Concept ;
+	skos:definition "A mechanism via which an identifier is mapped onto a specific process." ;
+	skos:example "DNS resolution maps domain names onto IP addresses." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "Resolution mechanisms designed for large systems allow for basic load balancing and failover behavior by providing a one-to-many mapping between identifiers and processes." ;
+	skos:prefLabel "resolution" ;
+	.
+
+eoc:router
+	a skos:Concept ;
+	skos:definition "A mechanism that provides indirection by exposing a single channel and distributing the data on that channel across multiple processes." ;
+	skos:example "One example is a thread pool: functions are placed on a shared queue and distributed to threads that execute them." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "router" ;
+	.
+
+eoc:satisfices
+	a skos:Concept ;
+	skos:definition "A model that may not be optimal, but that works well enough in practice, satisfices." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "satisfices" ;
+	.
+
+eoc:selfconscious
+	a skos:Concept ;
+	skos:definition "Describes a culture in which design and construction is a specialized task, taught in schools using abstract principles." ;
+	skos:example "Skyskrapers, stadiums." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note " The structures of a selfconscious culture are principled; they are not meant to change. If the environment changes, the structure is hardened against the change rather than adapting to it." ;
+	skos:prefLabel "selfconscious" ;
+	.
+
+eoc:sense
+	a skos:Concept ;
+	skos:definition "The sense of a name is *how* it is referenced, the set of fundamental properties we ascribe to it." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "When we encounter a new name, we only need to understand its sense. The underlying implementation, the referent, can change without us ever knowing or caring." ;
+	skos:prefLabel "sense" ;
+	.
+
+eoc:sign
+	a skos:Concept ;
+	skos:definition "The textual representation of a name." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "sign" ;
+	.
+
+eoc:spawning
+	a skos:Concept ;
+	skos:definition "A mechanism may start a new process each time it is triggered. This is spawning. That is, rather than there being a single process, multiple processes are spawned and execute concurrently." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "spawning" ;
+	.
+
+<https://donnywinston.com/elements_of_clojure#static%20dispatch>
+	a skos:Concept ;
+	skos:definition "Association a method with an implementation at compile time." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "static dispatch" ;
+	.
+
+eoc:synthetic
+	a skos:Concept ;
+	skos:definition "A synthetic name has no intuitive sense in the context of our code." ;
+	skos:example "Category theory is a rich source of synthetic names. 'Monad', to most readers, means nothing. As a result, we can define it to mean anything." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "Synthetic names turn comprehension into a binary proposition: either you understand it or you don't." ;
+	skos:prefLabel "synthetic" ;
+	.
+
+eoc:system
+	a skos:Concept ;
+	skos:definition "A composition of processes." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "system" ;
+	.
+
+eoc:table
+	a skos:Concept ;
+	skos:definition "A data structure with a distinct set of unordered keys, used to implement an open decision-making mechanism." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "table" ;
+	.
+
+eoc:task
+	a skos:Concept ;
+	skos:definition "A task is something that begins when a command enters a system and that ends when the consequences of an effect are uncertain. The completion of a task is the ultimate goal of any push, whereas the proximate goal of any push is communication." ;
+	skos:example "A task might be started by a keystroke, a packet from the network, or the creation of the system. A task might end when we can't dictate how a user will respond after displaying text on a screen, or when we can't dictate if a value will ever be read after writing it to a database." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "task" ;
+	.
+
+eoc:topology
+	a skos:Concept ;
+	skos:definition "The topology of a system is the graph describing the set of active processes and the relationships between them." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "topology" ;
+	.
+
+eoc:transform
+	a skos:Concept ;
+	skos:definition "A process can transform data." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "transform" ;
+	.
+
+eoc:unselfconscious
+	a skos:Concept ;
+	skos:definition "Describes a culture in which design and construction is taught using direct demonstration and reflects the constraints and variation of an environment." ;
+	skos:example 'In building igloos, there is no "architect" -- each person builds their own home.' ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:note "The structures of an unselfconscious culture are adaptable; they reflect the present needs of the inhabitants." ;
+	skos:prefLabel "unselfconscious" ;
+	.
+
+eoc:utilization
+	a skos:Concept ;
+	skos:definition "The utilization of a state container is a measure of how often it is in the process of being updated." ;
+	skos:inScheme <https://donnywinston.com/elements_of_clojure> ;
+	skos:prefLabel "utilization" ;
+	.
 
