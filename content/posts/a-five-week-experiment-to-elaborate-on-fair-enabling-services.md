@@ -2,6 +2,8 @@
 title: "A Five-Week Experiment to Elaborate on FAIR-Enabling Services"
 date: 2022-08-19T09:48:20-04:00
 draft: false
+tags:
+- FAIR-enabling-services
 ---
 
 [Yesterday](https://donnywinston.com/posts/fair-enabling-services/), I proposed that a strategy for

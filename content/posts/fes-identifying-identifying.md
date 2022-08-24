@@ -2,6 +2,8 @@
 title: "Identifying Identifying"
 date: 2022-08-22T19:27:28-04:00
 draft: false
+tags:
+- FAIR-enabling-services
 ---
 
 Day 1 of my [five-week experiment to elaborate on FAIR-enabling
