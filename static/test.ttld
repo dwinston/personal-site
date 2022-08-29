@@ -9,6 +9,6 @@ draft: false
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix s: <http://purl.org/supermannnn/> .
 
-Am I rdf:type owl:Thing?
+Am I rdf:type owl:Thing? Or an owl:Thang?
 
 Great!
