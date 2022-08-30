@@ -1,0 +1,31 @@
+---
+title: "Who Validates the Validators?"
+date: 2022-08-30T15:49:05+02:00
+draft: false
+tags:
+- FAIR-enabling-services
+level: Advanced
+reqs:
+- https://w3id.org/fair/fip/terms/Metadata-schema
+- http://www.w3.org/ns/shacl#Validator
+- https://json-schema.org/
+- https://w3id.org/fair/fip/terms/Knowledge-representation-language
+- https://w3id.org/fair/fip/terms/Structured-vocabulary
+- https://w3id.org/fair/fip/terms/Semantic-model
+- http://usefulinc.com/ns/doap#Specification
+teaches:
+- https://en.wikipedia.org/wiki/Robustness_principle
+---
+
+Given a fip:Metadata-schema and a validator for it,
+such as a sh:Validator or a [JSON Schema](https://json-schema.org/), how do you determine that the
+validator is...valid? That it speaks the desired fip:Knowledge-representation-language,
+that it knows all the terms in a desired fip:Structured-vocabulary and checks their usage against a desired fip:Semantic-model?
+In other words, that it adheres to a doap:Specification?
+
+I do not know. However, I suspect that it is more important [to check output rather than input](https://en.wikipedia.org/wiki/Robustness_principle).
+
+{{< subscribe >}}
+
+{{< fairpoint >}}
+

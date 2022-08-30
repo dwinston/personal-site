@@ -3,12 +3,7 @@ title: "Test"
 date: 2021-03-26T14:56:43-04:00
 draft: false
 ---
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix s: <http://purl.org/supermannnn/> .
 
-Am I rdf:type owl:Thing? Or an owl:Thang?
+Am I rdf:type owl:Thing? Or an owl:equivalentClass? Or a fellow with dcterms:rights!?
 
 Great!
