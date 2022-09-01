@@ -426,3 +426,17 @@ https://w3id.org/fair/fip/terms/Structured-vocabulary
 https://w3id.org/fair/principles/terms/R
 https://w3id.org/fair/principles/terms/R1.3
 https://w3id.org/fair/fip/terms/FAIR-Enabling-Resource
+https://www.w3.org/TR/dx-prof-conneg/#dfn-specification
+https://www.w3.org/TR/dx-prof-conneg/#dfn-data-specification
+https://www.w3.org/TR/dx-prof-conneg/#dfn-functional-specification
+https://www.w3.org/TR/dx-prof-conneg/#dfn-profile
+https://www.w3.org/TR/dx-prof-conneg/#dfn-data-profile
+https://www.w3.org/TR/dx-prof-conneg/#dfn-functional-profile
+https://www.w3.org/TR/dx-prof-conneg/#dfn-client
+https://www.w3.org/TR/dx-prof-conneg/#dfn-server
+https://www.w3.org/TR/dx-prof-conneg/#dfn-resource
+https://www.w3.org/TR/dx-prof-conneg/#dfn-representation
+https://www.w3.org/TR/dx-prof-conneg/#dfn-metadata
+https://www.w3.org/TR/dx-prof-conneg/#dfn-request
+https://www.w3.org/TR/dx-prof-conneg/#dfn-response
+https://www.w3.org/TR/dx-prof-conneg/#dfn-token

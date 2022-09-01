@@ -6,6 +6,7 @@ from rdflib import Graph
 from rdflib.namespace import NamespaceManager
 import rdflib.namespace
 import requests
+from toolz import merge
 
 filepath = sys.argv[1]
 assert filepath.endswith(".ttld")
@@ -14,7 +15,7 @@ lines_raw = Path(filepath).read_text().splitlines()
 
 lines_header = []
 lines_body = []
-prefixes = {}
+prefixes_doc = {}
 in_header = False
 for line in lines_raw:
     if line == "---":
@@ -26,7 +27,7 @@ for line in lines_raw:
         continue
 
     if m := re.fullmatch(r"@prefix\s+([^:]*):\s+<([^<].+)>\s+.", line):
-        prefixes[m.group(1)] = m.group(2)
+        prefixes_doc[m.group(1)] = m.group(2)
     else:
         lines_body.append(line)
 
@@ -131,13 +132,26 @@ prefixes_additional = {
     "fair": "https://w3id.org/fair/principles/terms/",
     "fip": "https://w3id.org/fair/fip/terms/",
 }
+prefixes_additional = merge(prefixes_additional, prefixes_doc)
 for p, url in prefixes_additional.items():
     if p not in prefixes:
         prefixes[p] = url
     else:
         raise ValueError("DANGER: Attempt to clobber conventiional prefix!")
 
-PUNCTUATION = "?.:;!-/'\")[,"
+PUNCTUATION = "?.:;!-/'\")[],"
+
+
+def get_known_uris(uri_pattern, localid_pfx="dfn-"):
+    from bs4 import BeautifulSoup
+    import requests
+    html_doc = requests.get(uri_pattern).text
+    soup = BeautifulSoup(html_doc, 'html.parser')
+    localids = [
+        tag.get("id") for tag in
+        soup.find_all(lambda tag: tag.has_attr("id") and tag.get("id").startswith(localid_pfx))]
+    return [(uri_pattern + '#' + id_) for id_ in localids]
+
 
 KNOWN_URIS = set((Path(__file__).parent / "static" / "known_uris.txt").read_text().splitlines())
 
