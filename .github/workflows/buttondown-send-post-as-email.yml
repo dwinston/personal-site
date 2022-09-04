@@ -1,5 +1,5 @@
 
-name: Python application
+name: Email New Posts
 
 on:
   push:
