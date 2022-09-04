@@ -3,7 +3,7 @@ name: Email New Posts
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'content/posts/*.md'
 
