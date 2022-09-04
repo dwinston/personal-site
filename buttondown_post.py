@@ -28,11 +28,15 @@ def posts_upserted():
 
 
 def was_published(filepath: str):
-    return bool(
-        subprocess.check_output(
-            "git diff HEAD~1 HEAD -- " + filepath + " grep '+draft: false'", shell=True
-        ).strip()
-    )
+    try:
+        return bool(
+            subprocess.check_output(
+                "git diff HEAD~1 HEAD -- " + filepath + " | grep '+draft: false'", shell=True
+            ).strip()
+        )
+    except subprocess.CalledProcessError as e:
+        print(str(e))
+        return False
 
 
 if __name__ == "__main__":
