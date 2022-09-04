@@ -2,6 +2,8 @@
 title: "Validating Traces — Syntactically, Semantically, and Situationally"
 date: 2022-09-04T13:28:00+02:00
 draft: false
+tags:
+- FAIR-enabling-services
 ---
 
 How do you validate a reified trace of digital-object provenance?
