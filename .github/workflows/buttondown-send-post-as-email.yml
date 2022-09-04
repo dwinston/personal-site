@@ -1,0 +1,32 @@
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/posts/*.md'
+
+jobs:
+  sendmail:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      -
+        name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+      - name: Install dependencies
+        run: |
+          pip -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test with pytest
+        run: |
+          make up-test
+          make test
