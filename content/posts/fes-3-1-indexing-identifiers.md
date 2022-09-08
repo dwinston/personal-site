@@ -2,6 +2,8 @@
 title: "Indexing Identifiers"
 date: 2022-09-06T14:09:02+02:00
 draft: false
+tags:
+- FAIR-enabling-services
 ---
 
 Indexing identifiers is key to disambiguating entities.
