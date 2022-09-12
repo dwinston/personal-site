@@ -2,6 +2,8 @@
 title: "Indexing Translators and Traces"
 date: 2022-09-12T14:02:22+02:00
 draft: false
+tags:
+- FAIR-enabling-services
 ---
 
 Is a metadata record "almost" expressed in the same language you used for your filter criteria?
@@ -21,3 +23,5 @@ resources for reuse.
 
 Rather than repeated union-finding of indexed intersections along these paths, it may be worth
 indexing whole paths or segments thereof.
+
+{{< subscribe >}}
