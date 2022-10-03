@@ -40,4 +40,4 @@ Astronomy Thesaurus (UAT)](https://astrothesaurus.org/) and harmonizing that wit
 [OpenAlex](https://openalex.org/) concept scheme so that one may evaluate semantics-fueled
 improvements to query understanding and thus search-result relevance via the OpenAlex dataset. The
 OpenAlex dataset has value as a testbed for improvements to in-production search engines such as the
-[SAO/NASA Astriphysics Data System](https://ui.adsabs.harvard.edu/).
+[SAO/NASA Astrophysics Data System](https://ui.adsabs.harvard.edu/).
