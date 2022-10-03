@@ -13,19 +13,48 @@
             "@vocab": "https://schema.org/",
             "dcterms": "http://purl.org/dc/terms/"
           },
-          "@type": "LearningResource",
+          "@type": "BlogPosting",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Donny Winston",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://www.gravatar.com/avatar/7fd9c14251809462e5f9cee070cf881d?s=250&r=x&d=mp",
+                "width": 250,
+                "height": 250
+              },
+              "url": "https://donnywinston.com",
+              "identifier": "https://orcid.org/0000-0002-8424-0604",
+              "sameAs": [
+                "https://twitter.com/donnywinston",
+                "https://www.linkedin.com/in/donnywinston/"
+              ]
+            }
+          ],
+          "publisher": {
+              "@type": "Organization",
+              "name": "Polyneme LLC",
+              "url": "https://www.polyneme.xyz",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://polyneme.xyz/icons/icon-96x96.png",
+                "width": 60,
+                "height": 60
+              }
+          },
+          "headline": "{{ .Title }}",
+          "url": "{{ .Permalink }}",
+          "datePublished": "{{ .PublishDate }}",
+          "dateModified": "{{ .Lastmod }}",
+          "keywords": [ {{ range $index, $item := .Keywords }}{{ if $index }}, {{ end }}"{{ $item }}" {{ end }}],
           "@id": "https://n2t.net/ark:57802/dw0/blog/{{ .RelPermalink }}",
           "name": "{{ .Title }}",
-          "keywords": [ {{ range $index, $item := .Keywords }}{{ if $index }}, {{ end }}"{{ $item }}" {{ end }}],
           "educationalLevel": {{ if .Params.level }}{{ .Params.level }}{{ else }}"Beginner"{{ end }}, // Beginner | Intermediate | Advanced
+          "description": "{{ .Summary }}",
           "competencyRequired": [ {{ range $index, $item := .Params.reqs }}{{ if $index }}, {{ end }}"{{ $item }}" {{ end }}],
           "teaches": [ {{ range $index, $item := .Params.teaches }}{{ if $index }}, {{ end }}"{{ $item }}" {{ end }}],
-          "description": "{{ .Summary }}",
           "abstract": "{{ .Summary }}",
-          "dcterms:conformsTo": {
-            "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-              "@type": "CreativeWork"
-          },
           "about": [
             {
               "@type": "DefinedTerm",
@@ -50,33 +79,14 @@
             "@type": "Audience",
             "audienceType": "People interested in publishing their research output"
           },
-          "author": [
-            {
-              "@type": "Person",
-              "name": "Donny Winston",
-              "identifier": "https://orcid.org/0000-0002-8424-0604"
-            },
-            {
-              "@type": "Organization",
-              "name": "FAIRPoints",
-              "url": "https://www.fairpoints.org"
-            },
-            {
-              "@type": "Organization",
-              "name": "Polyneme LLC",
-              "url": "https://www.polyneme.xyz"
-            }
-          ],
+
           "identifier": "https://n2t.net/ark:57802/dw0/blog/{{ .RelPermalink }}",
           "inLanguage": ["en-US"],
           "learningResourceType": ["blogpost"],
           "license": ["https://creativecommons.org/licenses/by/4.0/"],
           "timeRequired": "PT10M",
-          "url": "{{ .Permalink }}",
           "creativeWorkStatus": "Active",
           "dateCreated": "{{ .Date }}",
-          "dateModified": "{{ .Lastmod }}",
-          "datePublished": "{{ .PublishDate }}",
           "version": "1"
         }
     </script>
