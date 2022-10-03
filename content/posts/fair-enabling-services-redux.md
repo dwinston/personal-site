@@ -1,7 +1,7 @@
 ---
 title: "FAIR-Enabling Services Redux"
 date: 2022-10-03T11:18:58-04:00
-draft: false
+draft: true
 level: Intermediate
 keywords:
 - FAIR-Enabling Services
