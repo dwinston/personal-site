@@ -1,7 +1,7 @@
 ---
 title: "Translating Identifiers"
 date: 2022-09-12T15:59:25+02:00
-draft: true
+draft: false
 ---
 
 Don't. Identifiers should be opaque.
