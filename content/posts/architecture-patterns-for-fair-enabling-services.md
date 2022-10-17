@@ -1,7 +1,7 @@
 ---
 title: "Architecture Patterns for FAIR-Enabling Services"
 date: 2022-10-17T10:26:37-04:00
-draft: true
+draft: false
 ---
 
 I've been trying to grok architecture patterns as presented by Percival and Gregory[^patterns] to
