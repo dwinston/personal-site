@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-445.8077 191.77778 2701 2143.1923" width="2701" height="2143.1923">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="#7f8080">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-9 -4 10 8" markerWidth="10" markerHeight="8" color="#7f8080">
+      <g>
+        <path d="M -8 0 L 0 3 L 0 -3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Canvas_1" stroke-dasharray="none" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1">
+    <title>Canvas 1</title>
+    <rect fill="white" x="-445.8077" y="191.77778" width="2701" height="2143.1923"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_41">
+        <path d="M 357 316.8389 L 1217 316.8389 C 1228.0457 316.8389 1237 325.7932 1237 336.8389 L 1237 767.6081 C 1237 778.6538 1228.0457 787.6081 1217 787.6081 L 357 787.6081 C 345.9543 787.6081 337 778.6538 337 767.6081 L 337 336.8389 C 337 325.7932 345.9543 316.8389 357 316.8389 Z" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <text transform="translate(342 321.8389)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="325.608" y="30">Identifier Service</tspan>
+        </text>
+      </g>
+      <g id="Graphic_42">
+        <rect x="368.73078" y="372.2235" width="830.7692" height="120" fill="white"/>
+        <rect x="368.73078" y="372.2235" width="830.7692" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 394.2235)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Minter</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that provides algorithms guaranteeing global </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">uniqueness of the identifier</tspan>
+        </text>
+      </g>
+      <g id="Graphic_43">
+        <rect x="368.73078" y="497.2235" width="830.7692" height="120" fill="white"/>
+        <rect x="368.73078" y="497.2235" width="830.7692" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 500.2235)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Binder</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that that guarantees persistent binding of the </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">identifier to machine-actionable metadata describing the object </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">and its location</tspan>
+        </text>
+      </g>
+      <g id="Graphic_44">
+        <rect x="368.73078" y="622.2235" width="830.7692" height="120" fill="white"/>
+        <rect x="368.73078" y="622.2235" width="830.7692" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 625.2235)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Resolver</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that guarantees resolution of the identifier </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">to machine-actionable metadata describing the object and its </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">location</tspan>
+        </text>
+      </g>
+      <g id="Graphic_51">
+        <rect x="368.73078" y="1742.9928" width="830.769" height="120" fill="white"/>
+        <rect x="368.73078" y="1742.9928" width="830.769" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 1764.9928)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Transactor</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that performs validation and persists </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">valid transactions to (meta)data storage.</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <rect x="368.73078" y="1867.9928" width="830.769" height="120" fill="white"/>
+        <rect x="368.73078" y="1867.9928" width="830.769" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 1870.9928)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Harmonizer</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that mediates among multiple schema/</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">viewpoints and orchestrates extract-transform-load (ETL) </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">processes to import (meta)data</tspan>
+        </text>
+      </g>
+      <g id="Graphic_46">
+        <path d="M 357 884.5312 L 1217 884.5312 C 1228.0457 884.5312 1237 893.4855 1237 904.5312 L 1237 1159.5312 C 1237 1170.5769 1228.0457 1179.5312 1217 1179.5312 L 357 1179.5312 C 345.9543 1179.5312 337 1170.5769 337 1159.5312 L 337 904.5312 C 337 893.4855 345.9543 884.5312 357 884.5312 Z" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <text transform="translate(342 889.5312)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="386.344" y="30">Registry</tspan>
+        </text>
+      </g>
+      <g id="Graphic_47">
+        <rect x="368.73078" y="939.9158" width="830.7692" height="80" fill="white"/>
+        <rect x="368.73078" y="939.9158" width="830.7692" height="80" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 960.9158)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Index</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that indexes metadata and data</tspan>
+        </text>
+      </g>
+      <g id="Graphic_48">
+        <rect x="368.73078" y="1059.9158" width="830.7692" height="80" fill="white"/>
+        <rect x="368.73078" y="1059.9158" width="830.7692" height="80" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 1080.9158)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Search Engine</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that provides search over the index</tspan>
+        </text>
+      </g>
+      <g id="Line_81">
+        <line x1="784.1154" y1="1059.9158" x2="784.1154" y2="1029.8158" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_50">
+        <path d="M 357 1313.762 L 1217 1313.762 C 1228.0457 1313.762 1237 1322.7163 1237 1333.762 L 1237 1668.762 C 1237 1679.8077 1228.0457 1688.762 1217 1688.762 L 357 1688.762 C 345.9543 1688.762 337 1679.8077 337 1668.762 L 337 1333.762 C 337 1322.7163 345.9543 1313.762 357 1313.762 Z" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <text transform="translate(342 1318.762)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="367.672" y="30">Repository</tspan>
+        </text>
+      </g>
+      <g id="Graphic_39">
+        <rect x="368.73078" y="1369.1466" width="830.7692" height="120" fill="white"/>
+        <rect x="368.73078" y="1369.1466" width="830.7692" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 1372.1466)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Authentication and authorization service</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">mediates access to digital objects according to specifed </tspan>
+          <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">conditions.</tspan>
+        </text>
+      </g>
+      <g id="Graphic_49">
+        <rect x="368.73078" y="1529.1466" width="830.7692" height="120" fill="white"/>
+        <rect x="368.73078" y="1529.1466" width="830.7692" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(373.73078 1570.1466)" fill="black">
+          <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Object store</tspan>
+          <tspan font-family="Times" font-size="32" fill="black" y="30">: A service that stores and serves digital objects.</tspan>
+        </text>
+      </g>
+      <g id="Line_92">
+        <line x1="784.1154" y1="1529.1466" x2="784.1154" y2="1499.0466" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Group_237">
+        <g id="Graphic_23">
+          <rect x="1423.9231" y="776.5312" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="776.5312" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 814.6851)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Communication protocol</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A specification how messages are </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">structured and exchanged.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_33">
+          <rect x="1423.9231" y="956.5312" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="956.5312" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 975.685)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Metadata preservation policy</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A document that describes the </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">conditions under which metadata are to be provisioned in the </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">future (maybe part of a data management plan).</tspan>
+          </text>
+        </g>
+        <g id="Graphic_34">
+          <rect x="1423.9231" y="316.8389" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="316.8389" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 335.99274)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Metadata schema</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A specification (schema) that specifies </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">metadata fields describing attributes of data or other digital </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">objects.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_35">
+          <rect x="1423.9231" y="496.8389" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="496.8389" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 515.99274)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Metadata-data linking schema</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A specification (schema) that </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">provides a unique, persistent, (ideally) bi-directional, machine-</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">actionable link between metadata and the data they describe.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_31">
+          <rect x="1423.9231" y="1936.3932" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="1936.3932" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 1974.547)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Data usage license</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A document that describes the conditions </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">under which a digital object can be legally used.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_36">
+          <rect x="1423.9231" y="2116.3932" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="2116.3932" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 2135.547)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Provenance model</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A specification (schema) that specifies </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">metadata fields describing the origin and lineage of data or </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">other digital objects.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_32">
+          <rect x="1423.9231" y="1233.4543" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="1233.4543" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 1252.6081)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Knowledge representation language</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A language </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">specification whereby knowledge can be made processible by </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">machines.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_37">
+          <rect x="1423.9231" y="1593.4543" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="1593.4543" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 1612.6081)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Semantic model</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A specification that defines qualified relations </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">between entities describing data or other digital objects using </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">structured vocabularies.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_38">
+          <rect x="1423.9231" y="1413.4543" width="830.7692" height="152.3077" fill="white"/>
+          <rect x="1423.9231" y="1413.4543" width="830.7692" height="152.3077" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(1428.9231 1432.6081)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">Structured vocabulary</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: A controlled list of uniquely identified </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">and unambigous concepts with their definitions represented </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">preferably using web standards.</tspan>
+          </text>
+        </g>
+        <g id="Graphic_142">
+          <text transform="translate(1673.6757 196.77778)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="0" y="30">FAIR-Enabling Artifacts</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_144">
+        <text transform="translate(611.74884 196.77778)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="0" y="30">FAIR-Enabling Services</tspan>
+        </text>
+      </g>
+      <g id="Group_238">
+        <g id="Graphic_2">
+          <rect x="-445.3077" y="316.8389" width="595.3846" height="100" fill="white"/>
+          <rect x="-445.3077" y="316.8389" width="595.3846" height="100" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 328.8389)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">F1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data are assigned a globally unique </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">and persistent identifier</tspan>
+          </text>
+        </g>
+        <g id="Graphic_3">
+          <rect x="-445.3077" y="421.8389" width="595.3846" height="100" fill="white"/>
+          <rect x="-445.3077" y="421.8389" width="595.3846" height="100" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 433.8389)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">F2</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: data are described with rich metadata </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">(defined by R1 below)</tspan>
+          </text>
+        </g>
+        <g id="Graphic_4">
+          <rect x="-445.3077" y="526.8389" width="595.3846" height="100" fill="white"/>
+          <rect x="-445.3077" y="526.8389" width="595.3846" height="100" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 538.8389)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">F3</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: metadata clearly and explicitly include </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">the identifier of the data it describes</tspan>
+          </text>
+        </g>
+        <g id="Graphic_5">
+          <rect x="-445.3077" y="631.8389" width="595.3846" height="100" fill="white"/>
+          <rect x="-445.3077" y="631.8389" width="595.3846" height="100" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 643.8389)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">F4</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data are registered or indexed in a </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">searchable resource</tspan>
+          </text>
+        </g>
+        <g id="Graphic_6">
+          <rect x="-445.3077" y="1388.593" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1388.593" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1391.593)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">I1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data use a formal, accessible, </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">shared, and broadly applicable language for </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">knowledge representation</tspan>
+          </text>
+        </g>
+        <g id="Graphic_7">
+          <rect x="-445.3077" y="1513.593" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1513.593" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1535.593)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">I2</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data use vocabularies that follow </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">FAIR principles</tspan>
+          </text>
+        </g>
+        <g id="Graphic_8">
+          <rect x="-445.3077" y="1638.593" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1638.593" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1660.593)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">I3</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data include qualified references to </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">other (meta)data</tspan>
+          </text>
+        </g>
+        <g id="Graphic_9">
+          <rect x="-445.3077" y="1839.47" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1839.47" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1861.47)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">R1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: meta(data) are richly described with a </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">plurality of accurate and relevant attributes</tspan>
+          </text>
+        </g>
+        <g id="Graphic_10">
+          <rect x="-445.3077" y="1964.47" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1964.47" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1986.47)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">R1.1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data are released with a clear </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">and accessible data usage license</tspan>
+          </text>
+        </g>
+        <g id="Graphic_11">
+          <rect x="-445.3077" y="2089.47" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="2089.47" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 2111.47)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">R1.2</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data are associated with detailed </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">provenance</tspan>
+          </text>
+        </g>
+        <g id="Graphic_12">
+          <rect x="-445.3077" y="2214.47" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="2214.47" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 2236.47)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">R1.3</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data meet domain-relevant </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">community standards</tspan>
+          </text>
+        </g>
+        <g id="Graphic_13">
+          <rect x="-445.3077" y="812.716" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="812.716" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 815.716)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">A1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: (meta)data are retrievable by their </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">identifier using a standardized </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">communications protocol</tspan>
+          </text>
+        </g>
+        <g id="Graphic_14">
+          <rect x="-445.3077" y="937.716" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="937.716" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 959.716)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">A1.1</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: the protocol is open, free, and </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">universally implementable</tspan>
+          </text>
+        </g>
+        <g id="Graphic_15">
+          <rect x="-445.3077" y="1062.716" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1062.716" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1065.716)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">A1.2</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: the protocol allows for an </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">authentication and authorization procedure, </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="106">where necessary</tspan>
+          </text>
+        </g>
+        <g id="Graphic_16">
+          <rect x="-445.3077" y="1187.716" width="595.3846" height="120" fill="white"/>
+          <rect x="-445.3077" y="1187.716" width="595.3846" height="120" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-440.3077 1209.716)" fill="black">
+            <tspan font-family="Times" font-weight="bold" font-size="32" fill="black" x="0" y="30">A2</tspan>
+            <tspan font-family="Times" font-size="32" fill="black" y="30">: metadata are accessible, even when the </tspan>
+            <tspan font-family="Times" font-size="32" fill="black" x="0" y="68">data are no longer available</tspan>
+          </text>
+        </g>
+        <g id="Graphic_145">
+          <text transform="translate(-286.87938 196.77778)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="0" y="30">The FAIR Principles</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_188"/>
+      <g id="Graphic_189"/>
+      <g id="Graphic_190"/>
+      <g id="Graphic_192"/>
+      <g id="Graphic_193"/>
+      <g id="Graphic_194"/>
+      <g id="Graphic_195"/>
+      <g id="Graphic_198"/>
+      <g id="Graphic_199"/>
+      <g id="Graphic_200"/>
+      <g id="Graphic_201"/>
+      <g id="Graphic_202"/>
+      <g id="Graphic_203"/>
+      <g id="Line_204">
+        <line x1="293.372" y1="541.83316" x2="177.76924" y2="489.28645" marker-start="url(#FilledArrow_Marker_2)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_205">
+        <line x1="316.59653" y1="1027.3068" x2="167.80676" y2="496.8389" marker-start="url(#FilledArrow_Marker_2)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_206">
+        <line x1="316.3553" y1="1466.2566" x2="167.95424" y2="956.5312" marker-start="url(#FilledArrow_Marker_2)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_207"/>
+      <g id="Graphic_208"/>
+      <g id="Line_211">
+        <line x1="339.6108" y1="1844.8877" x2="170.77008" y2="1503.4543" marker-start="url(#FilledArrow_Marker_2)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_213">
+        <line x1="1271.6154" y1="549.706" x2="1386.4905" y2="528.81965" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_214">
+        <line x1="1261.6846" y1="1049.3004" x2="1403.4677" y2="547.9038" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_215">
+        <line x1="1255.8692" y1="1475.762" x2="1401.6777" y2="1073.8377" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_216">
+        <line x1="1225.0923" y1="1853.762" x2="1397.554" y2="1543.9505" marker-end="url(#FilledArrow_Marker)" stroke="#7f8080" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_218">
+        <text transform="translate(179.82647 378.06167)" fill="black">
+          <tspan font-family="Helvetica Neue" font-style="italic" font-size="32" fill="black" x="0" y="31">achieved</tspan>
+          <tspan font-family="Helvetica Neue" font-style="italic" font-size="32" fill="black" x="34.08" y="69.896">with</tspan>
+        </text>
+      </g>
+      <g id="Graphic_221">
+        <text transform="translate(1273.5656 397.50967)" fill="black">
+          <tspan font-family="Helvetica Neue" font-style="italic" font-size="32" fill="black" x="6394885e-19" y="31">requires</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
