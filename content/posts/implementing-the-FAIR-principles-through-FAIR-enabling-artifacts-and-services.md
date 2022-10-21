@@ -2,6 +2,7 @@
 title: "Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services"
 date: 2022-10-21T13:24:46-04:00
 draft: false
+doi_localpart: 11h5yt3819
 ---
 
 How does a [Research Software Engineer (RSE)](https://researchsoftware.org/) &mdash; often

@@ -48,7 +48,7 @@
           "datePublished": "{{ .PublishDate }}",
           "dateModified": "{{ .Lastmod }}",
           "keywords": [ {{ range $index, $item := .Keywords }}{{ if $index }}, {{ end }}"{{ $item }}" {{ end }}],
-          "@id": "https://n2t.net/ark:57802/dw0/blog/{{ .RelPermalink }}",
+          "@id": {{ if .Params.doi_localpart }}"https://doi.org/10.57099/{{ .Params.doi_localpart }}"{{ else }}"https://n2t.net/ark:57802/dw0/blog/{{ .RelPermalink }}"{{ end }},
           "name": "{{ .Title }}",
           "educationalLevel": {{ if .Params.level }}{{ .Params.level }}{{ else }}"Beginner"{{ end }}, // Beginner | Intermediate | Advanced
           "description": "{{ .Summary }}",
