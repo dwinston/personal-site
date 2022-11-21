@@ -28,7 +28,7 @@ summaryLength = 10
 
 	# Add links to your accounts. Remove the ones you don't want to include.
 	# Main
-	email = "mailto:mail@donnywinston.com"
+	# email = "mailto:donny@donnywinston.com"
 	linkedin = "https://www.linkedin.com/in/donnywinston/"
 
 	# Programming
@@ -37,7 +37,9 @@ summaryLength = 10
 
     # Academic
     # googlescholar = "#"
-    # orcid = "#" 
+    orcid = "https://orcid.org/0000-0002-8424-0604"
+
+    mastodon = "https://fairpoints.social/@donny"
 
 # Menu links along the sidebar navigation.
 [[menu.main]]
