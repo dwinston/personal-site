@@ -10,7 +10,11 @@ This note is inspired by [Rory Macneil’s recent interview with Sharif Islam on
 
 # ubiquitous persistent identifiers (PIDs)
 
-Identifiers must be persistent. Persistence is a matter of service, which needs organizational support. Furthermore, you are playing on hard mode here if you don’t ensure global uniqueness via HTTPS URIs. Crucially, PIDs must be ubiquitous across data holdings. A single PID that addresses all study-publication data elements as an aggregate, e.g. “one DOI for the primary article’s supplemental dataset”, is insufficient.
+Identifiers must be persistent.
+Persistence is a matter of service, which needs organizational support.
+Furthermore, you are playing on hard mode here if you don’t ensure global uniqueness via HTTPS URIs.[^AuthorityOrPrefix]
+Crucially, PIDs must be ubiquitous across data holdings.
+A single PID that addresses all study-publication data elements as an aggregate, e.g. “one DOI for the primary article’s supplemental dataset”, is insufficient.
 
 # rich controlled metadata
 
@@ -21,3 +25,5 @@ Metadata makes PIDs findable. Catalogs and search portals use metadata to help y
 Programmatic access must be supported. A well-documented, open-standards-based protocol
 facilitates machine-to-machine interactions to glue things together
 in a way that is distinct from affordances possible with human-centered interfaces (including bespoke APIs) and portals. This programmatic access must be granular — egress costs scale with data volume delivered, so let users sub-select slices of data. You are again playing on hard mode if programmatic access, and communicating granularity of such access, does not use PIDs. The [HTTP](https://www.rfc-editor.org/rfc/rfc9110.html) protocol and [URI](https://www.rfc-editor.org/rfc/rfc3986.html) scheme were designed for this, as were the W3C Resource Description Framework ([RDF](https://www.w3.org/TR/rdf11-primer/)) Recommendations.
+
+[^AuthorityOrPrefix]: [update 2022-12-25]: Global uniqueness for HTTPS URIs in practice is ensured either by (1) securing an HTTP URI `authority` component via the Domain Name System (DNS) or (2) securing a DNS-authority-delegated URI `path` prefix such as through w3id.org, the ARK alliance, or a DONA handle system (e.g. DOI) agent.
