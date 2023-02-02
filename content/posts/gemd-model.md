@@ -1,7 +1,7 @@
 ---
 title: "Modeling a Graphical Expression of Materials Data (GEMD)"
 date: 2023-02-02T10:45:00-05:00
-draft: true
+draft: false
 ---
 
 # model-memo
