@@ -44,6 +44,6 @@ https://www.doi.org/topics/indecs/indecs_framework_2000.pdf
 [^bide]: M. Bide, "Standard Identifiers: an overview of the current landscape," presented at the
 USPTO Open Meeting: Facilitating the Development of the Online Licensing Environment for Copyrighted
 Works, Apr. 01, 2015. [Online]. Available:
-[pdf](http://www.linkedcontentcoalition.org/phocadownload/150401%20BIDE%20Standard%20Identifiers%20Overview%20with%20embedded%20slides.pdf)
+[pdf](https://files.polyneme.xyz/dropshare/Bide-Standard-Identifiers-Overview-2015-04-01-w0UxVusxN8.pdf)
 
 
