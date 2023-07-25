@@ -21,7 +21,7 @@ summaryLength = 10
     unsafe = true
 
 [mediaTypes]
-  [mediaTypes."application/atom+xml"]
+  [mediaTypes."application/atom+xml"] # Thank you <https://c20d.blog/posts/2023/04/atom-feeds-with-hugo/> !
     suffixes = ["xml"]
 
 # Menu links along the sidebar navigation.
