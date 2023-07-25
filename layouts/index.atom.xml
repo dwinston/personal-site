@@ -27,9 +27,10 @@
   {{ with .Site.Params.icon96 }}<webfeeds:icon>{{ . | absURL }}</webfeeds:icon>{{ end }}
   {{ range $pages }}
   <entry>
-    {{ with .Params.Author }}
+    {{ with .Params.author }}
     <author>
-      <name>{{ . }}</name>
+      <name>{{ .name }}</name>
+      <uri>{{ .orcid }}</uri>
     </author>
     {{ end }}
     <id>tag:{{ $u := urls.Parse .Permalink }}{{ $u.Hostname }},{{ .Date.Format .Site.Params.dateFormatTag }}:{{ replace $u.Path "#" "_" }}</id>
