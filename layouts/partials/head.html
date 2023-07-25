@@ -92,9 +92,9 @@
     </script>
     {{ end }}
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.favicon }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.favicon }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.favicon }}">
     <link rel="manifest" href="{{ "manifest.json" | relURL }}">
     <link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#FF3DB4">
     <meta name="theme-color" content="#ffffff">
@@ -114,8 +114,11 @@
     <!-- Modify the custom.css file inside static > css to use vanilla css -->
     <!-- <link type="text/css" rel="stylesheet" href="{{ "/" | relURL }}css/custom.css"> -->
  
-    {{ with .OutputFormats.Get "RSS" }}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+<!--    {{ with .OutputFormats.Get "RSS" }}-->
+<!--    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}-->
+<!--    {{ end }}-->
+    {{ with .OutputFormats.Get "atom" }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end }}
     {{- if not .Site.IsServer -}}
       {{ template "_internal/google_analytics.html" . }}

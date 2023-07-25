@@ -1,0 +1,116 @@
+baseURL = ""
+copyright = "Copyright © 2020-{year} Donny Winston. All posts licenced under <https://creativecommons.org/licenses/by-nc-sa/4.0/>."
+languageCode = "en-us"
+rssLimit = 100
+title = "Donny Winston"
+timeZone = "America/New_York"
+theme = "noteworthy"
+enableRobotsTXT = true
+paginate = 4
+summaryLength = 10
+
+[taxonomies]
+  tag = "tags"
+
+[author]
+	name = "Donny Winston"
+    orcid = "https://orcid.org/0000-0002-8424-0604"
+
+# Set to false to disallow raw HTML in markdown files
+[markup.goldmark.renderer]
+    unsafe = true
+
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+# Menu links along the sidebar navigation.
+[[menu.main]]
+	identifier = "about"
+	name = "About"
+	url = "/about/"
+	weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
+
+[[menu.main]]
+	identifier = "consulting"
+	name = "Consulting"
+	url = "/consulting/"
+	weight = 2
+
+#[[menu.main]]
+#	identifier = "tags"
+#	name = "Tags"
+#	url = "/tags/"
+#	weight = 3
+
+[[menu.main]]
+	name = "Archives"
+	identifier = "archives"
+	url = "/archives/"
+	weight = 4
+
+[[menu.main]]
+	identifier = "feed"
+	name = "Feed"
+	url = "/feed.xml"
+	weight = 5
+
+[outputFormats]
+  [outputFormats.ATOM]
+    mediaType = "application/atom+xml"
+    baseName  = "feed"
+
+[outputs]
+  home = ["ATOM", "HTML", "JSON"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[params]
+    favicon = "https://files.polyneme.xyz/polyneme-logo-sq-AdH548JPkxW0qf3M5NVTVLt5qdVKFN28AKKvS35A2ndmDMQ0baH90H5APJvIITO2UkFht8rLzZGQTxob8DCqG3KqnsEOczShPKoT.png"
+	math = true
+	# Blog description at the top of the homepage. Supports markdown.
+	description = "Made as simple as possible, but not simpler."
+
+    # Set enableKofi to true to enable the Ko-fi support button. Add your Ko-fi ID to link to your account.
+    enableKofi = false
+    kofi = ""
+
+	# Add links to your accounts. Remove the ones you don't want to include.
+	# Main
+	# email = "mailto:donny@donnywinston.com"
+	linkedin = "https://www.linkedin.com/in/donnywinston/"
+
+	# Programming
+    github = "https://github.com/dwinston/"
+	# stackoverflow = "#"
+
+    # Academic
+    # googlescholar = "#"
+    orcid = "https://orcid.org/0000-0002-8424-0604"
+
+    mastodon = "https://fairpoints.social/@donny"
+
+    dateFormatAtomFeed = "2006-01-02T15:04:05-07:00"
+    dateFormatTag = "2006"
+    feedUUID = "390a272f-8fa2-425a-b44e-09b477223a39"
+    icon = "https://files.polyneme.xyz/polyneme-logo-sq-AdH548JPkxW0qf3M5NVTVLt5qdVKFN28AKKvS35A2ndmDMQ0baH90H5APJvIITO2UkFht8rLzZGQTxob8DCqG3KqnsEOczShPKoT.png"
+    icon96 = "https://files.polyneme.xyz/polyneme-logo-sq-AdH548JPkxW0qf3M5NVTVLt5qdVKFN28AKKvS35A2ndmDMQ0baH90H5APJvIITO2UkFht8rLzZGQTxob8DCqG3KqnsEOczShPKoT.png"
+    logo = "https://files.polyneme.xyz/polyneme-logo-sq-AdH548JPkxW0qf3M5NVTVLt5qdVKFN28AKKvS35A2ndmDMQ0baH90H5APJvIITO2UkFht8rLzZGQTxob8DCqG3KqnsEOczShPKoT.png"
+    mainSections = ["posts"]
+
+# Privacy configurations: https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
