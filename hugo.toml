@@ -1,7 +1,7 @@
 baseURL = ""
 copyright = "Copyright © 2020-{year} Donny Winston. All posts licenced under <https://creativecommons.org/licenses/by-nc-sa/4.0/>."
 languageCode = "en-us"
-rssLimit = 10
+rssLimit = 500
 title = "Donny Winston"
 timeZone = "America/New_York"
 theme = "noteworthy"
