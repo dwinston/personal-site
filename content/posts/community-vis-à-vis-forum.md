@@ -1,5 +1,5 @@
 ---
-title: "Community Vis À Vis Forum"
+title: "Community vis-à-vis Forum"
 date: 2024-03-29T10:43:02-04:00
 draft: false
 ---
