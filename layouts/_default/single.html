@@ -6,7 +6,7 @@
     {{ end }}
     <div>
         <p>
-        {{ .Content }}
+        {{ .Content | replaceRE `((?s:role="doc-endnotes">.*?<ol))` "role=\"doc-endnotes\"><hr><h2 id=\"references\">References</h2><ol" | safeHTML }}
         </p>
     </div>
     {{ template "_internal/disqus.html" . }}

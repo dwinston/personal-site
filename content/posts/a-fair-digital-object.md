@@ -2,6 +2,8 @@
 title: "A FAIR Digital Object - Inching up the Hourglass"
 date: 2022-07-19T11:15:09-04:00
 draft: false
+tags:
+  - scholarly
 ---
 
 Whether deliberate[^1] or inevitable[^2], the hourglass architecture of the Internet supports a

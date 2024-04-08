@@ -1,7 +1,7 @@
 baseURL = ""
 copyright = "Copyright © 2020-{year} Donny Winston. All posts licenced under <https://creativecommons.org/licenses/by-nc-sa/4.0/>."
 languageCode = "en-us"
-rssLimit = 10
+rssLimit = 100
 title = "Donny Winston"
 timeZone = "America/New_York"
 theme = "noteworthy"
@@ -61,11 +61,11 @@ summaryLength = 10
     baseName  = "feed"
 
 [outputs]
-  home = ["ATOM", "HTML", "JSON"]
+  home = ["ATOM", "HTML"]
   page = ["HTML"]
   section = ["HTML"]
   taxonomy = ["HTML"]
-  term = ["HTML"]
+  term = ["ATOM", "HTML"]
 
 [params]
     favicon = "https://files.polyneme.xyz/polyneme-logo-sq-AdH548JPkxW0qf3M5NVTVLt5qdVKFN28AKKvS35A2ndmDMQ0baH90H5APJvIITO2UkFht8rLzZGQTxob8DCqG3KqnsEOczShPKoT.png"
