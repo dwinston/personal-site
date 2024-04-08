@@ -197,5 +197,3 @@ Furthermore, I am testing references introspection [^rsrefs] with this post.
 
 
 [^rsrefs]: Fenner, Martin. “Starting to Include References in DOI Metadata for Blog Posts.” Front Matter, June 16, 2023. https://doi.org/10.53731/6mkrk-dzh02.
-
-https://doi.org/10.53731/6mkrk-dzh02
