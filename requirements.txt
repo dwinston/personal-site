@@ -4,5 +4,5 @@ python-dotenv==0.20.0
 Markdown==3.4.1
 rdflib==6.1.1
 requests==2.31.0
-tqdm==4.64.0
+tqdm==4.66.3
 toolz==0.12.0
