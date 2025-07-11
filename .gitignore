@@ -5,3 +5,4 @@ public/
 repl.ipynb
 .ipynb_checkpoints/
 *.gitignore.md
+resources/_gen/
